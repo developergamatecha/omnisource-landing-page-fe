@@ -20,4 +20,5 @@ export default function Home() {
       <V5Contact />
     </main>
   );
+  return <main className="container mx-auto min-h-screen" />;
 }
