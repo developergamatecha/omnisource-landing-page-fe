@@ -5,7 +5,7 @@ import { Scene } from './laptop-model';
 export function V5Product() {
   return (
     <section
-      className="bg-muted/30 py-20 lg:py-32 relative w-full overflow-hidden"
+      className="bg-muted/30 py-20 lg:py-32 w-full overflow-hidden"
       id="produk"
     >
       {/* Background glow - green, purple, and yellow gradients */}

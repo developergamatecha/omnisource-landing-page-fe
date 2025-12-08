@@ -145,6 +145,12 @@
   }
 }
 
+@layer components {
+  .container {
+    @apply max-w-[1400px]! w-full;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;

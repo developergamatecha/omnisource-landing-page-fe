@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
+
 import '~/styles/globals.css';
 import { Rubik } from 'next/font/google';
+
 import { TopNavbar } from '~/components/home/top-navbar';
 
 export const metadata: Metadata = {
