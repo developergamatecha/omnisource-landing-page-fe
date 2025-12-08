@@ -40,7 +40,7 @@ const featureItems = [
 
 export function V5Hero() {
   return (
-    <section className="bg-background overflow-hidden" id="beranda">
+    <section className="bg-background overflow-hidden relative" id="beranda">
       {/* Background gradient decorations */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-primary/10 to-transparent pointer-events-none" />
       <div className="absolute top-20 right-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
@@ -106,7 +106,12 @@ export function V5Hero() {
           <div className="relative h-[40svh] lg:h-full justify-center lg:justify-end">
             {/* Main phone mockup */}
             <div
-              className="absolute z-10 bottom-2 lg:top-9 translate-x-1/2 lg:translate-x-[68%] right-1/2 w-[60%] lg:w-[35%] lg:h-full animate-fade-in"
+              className={`absolute z-10 
+                bottom-2 md:top-0 lg:top-9
+                translate-x-1/2 md:translate-x-0 xl:translate-x-[80%]
+                right-1/2 md:right-0 xl:right-1/2
+                w-[60%] md:w-[50%] xl:w-[42%] xl:h-full
+                animate-fade-in`}
               style={{ animationDelay: '0.6s' }}
             >
               <Image
