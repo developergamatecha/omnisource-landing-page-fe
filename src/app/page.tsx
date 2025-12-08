@@ -1,7 +1,8 @@
+
 export default function Home() {
   return (
-    <main>
-      <div>Hello world!</div>
+    <main className="container mx-auto min-h-screen">
+
     </main>
   );
 }
