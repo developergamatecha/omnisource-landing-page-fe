@@ -1,14 +1,20 @@
 'use client';
-import { useRef } from 'react';
-import { useFrame, Canvas } from '@react-three/fiber';
-import { Float, OrbitControls, useTexture } from '@react-three/drei';
+import { useEffect, useRef, useState } from 'react';
+import { useFrame, Canvas, useThree } from '@react-three/fiber';
+import { Float, OrbitControls, useGLTF, Environment } from '@react-three/drei';
 import * as THREE from 'three';
 
-import laptopImage from '~/assets/v5/laptop-3d.png';
-
 function LaptopModel() {
-  const meshRef = useRef<THREE.Mesh>(null);
-  const texture = useTexture(laptopImage.src);
+  const meshRef = useRef<THREE.Group>(null);
+  const { scene } = useGLTF('/assets/threejs/macbook_pro_14_inch_M5.glb');
+
+  const { size } = useThree();
+  // Reactive responsive logic based on Canvas pixel width
+  const isMobile = size.width < 640;
+  const isTablet = size.width < 1024;
+
+  const scale = isMobile ? 7 : isTablet ? 8 : 9;
+  const position = isMobile ? [0, -0.8, 0] : isTablet ? [0, -1, 0] : [0, -1, 0];
 
   useFrame((state) => {
     if (meshRef.current) {
@@ -24,28 +30,48 @@ function LaptopModel() {
       rotationIntensity={0.2}
       speed={2}
     >
-      <mesh ref={meshRef} position={[0, 0, 0]}>
-        <planeGeometry args={[4, 3.2]} />
-        <meshBasicMaterial transparent alphaTest={0.1} map={texture} />
-      </mesh>
+      <primitive
+        ref={meshRef}
+        object={scene}
+        position={position}
+        scale={scale}
+      />
     </Float>
   );
 }
 
+useGLTF.preload('/assets/threejs/macbook_pro_14_inch_M5.glb');
+
 export function Scene() {
+  const [width, setWidth] = useState<string | number>('100%');
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Check if tablet/mobile (< 1024px)
+      if (window.innerWidth < 1024) {
+        setWidth(window.innerWidth - 50);
+      } else {
+        // Desktop uses container width
+        setWidth('100%');
+      }
+    };
+
+    // Initial check
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
+    <Canvas camera={{ position: [0, 0, 8], fov: 25 }} style={{ width }}>
       <ambientLight intensity={1} />
-      <pointLight intensity={0.5} position={[10, 10, 10]} />
+      <pointLight intensity={1} position={[10, 10, 10]} />
+      <Environment preset="city" />
       <LaptopModel />
-      <OrbitControls
-        autoRotate
-        autoRotateSpeed={0.5}
-        enablePan={false}
-        enableZoom={false}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}
-      />
+      <OrbitControls autoRotate autoRotateSpeed={0.5} enableZoom={false} />
     </Canvas>
   );
 }

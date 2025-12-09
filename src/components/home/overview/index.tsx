@@ -1,11 +1,15 @@
+'use client';
+import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 
-import { Scene } from './laptop-model';
+const Scene = dynamic(() => import('./laptop-model').then((mod) => mod.Scene), {
+  ssr: false,
+});
 
-export function V5Product() {
+export function SectionProduct() {
   return (
     <section
-      className="bg-muted/30 py-20 lg:py-32 w-full relative overflow-hidden"
+      className="bg-background py-20 lg:py-32 w-full overflow-hidden"
       id="produk"
     >
       {/* Background glow - green, purple, and yellow gradients */}

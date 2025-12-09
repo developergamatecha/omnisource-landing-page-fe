@@ -1,8 +1,6 @@
 import { Box, BarChart3, Zap, Shield, HeadphonesIcon } from 'lucide-react';
 import Image from 'next/image';
 
-import phoneMockup from '~/assets/v5/phone-center-mockup.png';
-
 const solutions = [
   {
     id: 1,
@@ -38,7 +36,7 @@ const solutions = [
   },
 ];
 
-export function V5Solutions() {
+export function SectionSolutions() {
   return (
     <section className="py-20 lg:py-32 overflow-hidden bg-background">
       {/* Background green and soft blue gradients */}
@@ -92,7 +90,9 @@ export function V5Solutions() {
               <Image
                 alt="App mockup"
                 className="w-64 h-auto drop-shadow-2xl"
-                src={phoneMockup}
+                src="/assets/v5/phone-center-mockup.png"
+                width={300}
+                height={600}
               />
             </div>
 
@@ -145,7 +145,9 @@ export function V5Solutions() {
               <Image
                 alt="App mockup"
                 className="w-48 h-auto drop-shadow-2xl"
-                src={phoneMockup}
+                src="/assets/v5/phone-center-mockup.png"
+                width={300}
+                height={600}
               />
             </div>
 

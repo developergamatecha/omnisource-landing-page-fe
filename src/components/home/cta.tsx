@@ -1,10 +1,8 @@
 import Image from 'next/image';
 
-import ctaPhones from '~/assets/v5/cta-phones.png';
-
-export function V5CTA() {
+export function SectionCTA() {
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden">
+    <section className="py-20 lg:py-32 overflow-hidden">
       {/* Background gradients */}
       <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-primary/15 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-1/3 right-1/3 w-[250px] h-[250px] bg-blue-400/10 rounded-full blur-[90px] pointer-events-none" />
@@ -22,7 +20,9 @@ export function V5CTA() {
               <Image
                 alt="Mobile app preview"
                 className="w-full max-w-md mx-auto drop-shadow-2xl"
-                src={ctaPhones}
+                src="/assets/v5/cta-phones.png"
+                width={500}
+                height={500}
               />
             </div>
           </div>
@@ -97,5 +97,3 @@ export function V5CTA() {
     </section>
   );
 }
-
-export default V5CTA;

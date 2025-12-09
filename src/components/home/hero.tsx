@@ -8,8 +8,6 @@ import {
 } from 'lucide-react';
 
 import { Button } from '~/components/ui/button';
-import heroPhones1 from '~/assets/v5/hero-phones-1.png';
-import heroPhones2 from '~/assets/v5/hero-phones-2.png';
 
 const featureItems = [
   {
@@ -38,15 +36,9 @@ const featureItems = [
   },
 ];
 
-export function V5Hero() {
+export function SectionHero() {
   return (
-    <section className="bg-background overflow-hidden relative" id="beranda">
-      {/* Background gradient decorations */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-primary/10 to-transparent pointer-events-none" />
-      <div className="absolute top-20 right-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-warning/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-warning/10 rounded-full blur-2xl pointer-events-none" />
-
+    <section className="bg-background overflow-hidden" id="beranda">
       <div className="container mx-auto px-6 pt-[6svh] pb-16 lg:pb-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-5 lg:gap-8 items-center">
           {/* Left Content */}
@@ -103,12 +95,12 @@ export function V5Hero() {
           </div>
 
           {/* Right Content - Phone Mockups */}
-          <div className="relative h-[40svh] lg:h-full justify-center lg:justify-end">
+          <div className="relative min-h-[500px] h-[40svh] md:min-h-[600px] md:h-[550px] lg:h-full justify-center lg:justify-end">
             {/* Main phone mockup */}
             <div
               className={`absolute z-10 
-                bottom-2 md:top-0 lg:top-9
-                translate-x-1/2 md:translate-x-0 xl:translate-x-[80%]
+                bottom-2 md:top-0 lg:top-9 md:min-h-[50svh]
+                translate-x-1/2 md:-translate-x-[39%] xl:translate-x-[80%]
                 right-1/2 md:right-0 xl:right-1/2
                 w-[60%] md:w-[50%] xl:w-[42%] xl:h-full
                 animate-fade-in`}
@@ -119,20 +111,28 @@ export function V5Hero() {
                 className="w-full lg:max-w-lg drop-shadow-2xl"
                 height={0}
                 sizes="100%"
-                src={heroPhones1}
+                src="/assets/v5/hero-phones-1.png"
                 width={0}
+                style={{ width: '100%', height: 'auto' }}
               />
             </div>
 
             {/* Secondary floating phone */}
             <div
-              className="absolute  bottom-0 z-20 w-1/2 hidden md:block animate-fade-in"
+              className={`absolute -bottom-4 z-20 
+                hidden lg:block animate-fade-in
+                w-1/2 md:w-1/4 lg:w-1/2
+              `}
               style={{ animationDelay: '0.4s' }}
             >
               <Image
                 alt="OmniSource Dashboard Preview"
                 className="w-full h-full drop-shadow-xl"
-                src={heroPhones2}
+                src="/assets/v5/hero-phones-2.png"
+                width={0}
+                height={0}
+                sizes="100%"
+                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               />
             </div>
 
