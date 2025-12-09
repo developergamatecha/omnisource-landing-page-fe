@@ -1,4 +1,4 @@
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, Map } from 'lucide-react';
 import Image from 'next/image';
 
 import { FormQuotation } from './form-quotation';
@@ -78,7 +78,7 @@ export function SectionContact() {
         </div>
       </section>
       {/* Footer Bottom */}
-      <section className="bg-linear-90 from-neutral-800 to-neutral-950 text-white rounded-t-[30px] md:rounded-t-[80px]">
+      <section className="bg-[#22262a] text-white">
         <div className="container px-6 mx-auto">
           <div className="grid md:grid-cols-2 py-20">
             {/* Logo */}
@@ -94,13 +94,35 @@ export function SectionContact() {
                   Omnisource
                 </h3>
               </div>
-              <p className="text-md font-semibold">Support Center</p>
-              <a className="text-sm" href="mailto:ping@gamatecha.com">
-                ping@gamatecha.com
-              </a>
+              <p className="text-sm text-[#525b65] lg:w-3/4 mb-5">
+                Platform manajemen terpercaya untuk mengoptimalkan bisnis Anda
+                dengan solusi yang inovatif dan terintegrasi
+              </p>
+              <div className="flex items-center gap-4 my-3">
+                <Mail className="text-primary" />
+                <a
+                  href="mailto:ping@gamatecha.com"
+                  className="text-sm font-semibold text-[#525b65]"
+                >
+                  ping@gamatecha.com
+                </a>
+              </div>
+              <div className="flex items-center gap-4 my-3">
+                <Phone className="text-primary" />
+                <a
+                  href="tel:+628131099959"
+                  className="text-sm font-semibold text-[#525b65]"
+                >
+                  +62-813-1099-959
+                </a>
+              </div>
+              <div className="flex items-center gap-4 my-3">
+                <Map className="text-primary" />
+                <span className="text-[#525b65]">Malang, Indonesia</span>
+              </div>
             </div>
             <div className="grid grid-cols-2 mt-5 md:mt-0">
-              <ul className="flex flex-col gap-3">
+              <ul className="flex flex-col gap-3 text-[#525b65]">
                 {links.map((link) => (
                   <li key={link.label}>
                     <a
@@ -112,7 +134,7 @@ export function SectionContact() {
                   </li>
                 ))}
               </ul>
-              <ul className="flex flex-col gap-3">
+              <ul className="flex flex-col gap-3 text-[#525b65]">
                 {legals.map((link) => (
                   <li key={link.label}>
                     <a
@@ -127,7 +149,7 @@ export function SectionContact() {
             </div>
           </div>
           {/* Year */}
-          <div className="flex items-center justify-center pb-5">
+          <div className="flex items-center justify-center pb-5 border-t border-[#525b65] pt-5">
             <p className="text-gray-400 text-sm">
               ©2025 dibuat oleh PT Gamatecha Nusantara
             </p>
