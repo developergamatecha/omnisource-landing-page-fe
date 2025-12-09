@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import '~/styles/globals.css';
 import { Rubik } from 'next/font/google';
 
+import { Toaster } from '~/components/ui/sonner';
+
 export const metadata: Metadata = {
   title: 'OmniSource - One Platform to Manage All Your Outsourcing Operations',
   description:
@@ -21,7 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={rubik.className}>{children}</body>
+      <body className={rubik.className}>
+        {children}
+        <Toaster />
+      </body>
     </html>
   );
 }

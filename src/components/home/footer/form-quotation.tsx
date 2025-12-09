@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { toast } from 'sonner';
 
 import { Input } from '~/components/ui/input';
 import {
@@ -13,16 +14,53 @@ import {
 import { Button } from '~/components/ui/button';
 
 export function FormQuotation() {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     location: '',
     phone: '',
+    userAgent: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const userAgent = navigator.userAgent;
+    setLoading(true);
+    setFormData((prev) => ({
+      ...prev,
+      userAgent,
+    }));
+
+    try {
+      const response = await fetch('/api/quotation', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setLoading(false);
+        toast.success('Your quotation request has been sent successfully!');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          location: '',
+          phone: '',
+          userAgent: '',
+        });
+      } else {
+        toast.error(data.error || 'Something went wrong. Please try again.');
+      }
+    } catch {
+      toast.error('Failed to send request. Please try again later.');
+    }
   };
 
   return (
@@ -60,7 +98,7 @@ export function FormQuotation() {
             setFormData({ ...formData, location: value })
           }
         >
-          <SelectTrigger className="bg-muted/50 border-0">
+          <SelectTrigger className="w-full bg-muted/50 border-0">
             <SelectValue placeholder="Location's" />
           </SelectTrigger>
           <SelectContent>
@@ -80,8 +118,13 @@ export function FormQuotation() {
         />
       </div>
 
-      <Button className="w-full rounded-full" size="lg" type="submit">
-        Submit
+      <Button
+        className="w-full rounded-full"
+        size="lg"
+        type="submit"
+        disabled={loading}
+      >
+        {loading ? 'Loading...' : 'Submit'}
       </Button>
     </form>
   );

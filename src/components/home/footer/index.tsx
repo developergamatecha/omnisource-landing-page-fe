@@ -78,7 +78,7 @@ export function SectionContact() {
         </div>
       </section>
       {/* Footer Bottom */}
-      <section className="bg-primary/9 rounded-t-[30px] md:rounded-t-[80px]">
+      <section className="bg-linear-90 from-neutral-800 to-neutral-950 text-white rounded-t-[30px] md:rounded-t-[80px]">
         <div className="container px-6 mx-auto">
           <div className="grid md:grid-cols-2 py-20">
             {/* Logo */}
@@ -90,7 +90,7 @@ export function SectionContact() {
                   src="/assets/white-logo.webp"
                   width={35}
                 />
-                <h3 className="text-2xl md:text-3xl font-semibold text-foreground">
+                <h3 className="text-2xl md:text-3xl font-semibold text-white text-foreground">
                   Omnisource
                 </h3>
               </div>
@@ -128,8 +128,8 @@ export function SectionContact() {
           </div>
           {/* Year */}
           <div className="flex items-center justify-center pb-5">
-            <p className="text-muted-foreground text-sm">
-              ©2025 Omnisource. All rights reserved.
+            <p className="text-gray-400 text-sm">
+              ©2025 dibuat oleh PT Gamatecha Nusantara
             </p>
           </div>
         </div>
