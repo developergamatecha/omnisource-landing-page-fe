@@ -1,6 +1,7 @@
 'use client';
 
 import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 import { useState } from 'react';
 
 import { Button } from '~/components/ui/button';
@@ -23,31 +24,12 @@ export function TopNavbar() {
           {/* Logo */}
           <div className="flex items-center gap-3 group cursor-pointer">
             <div className="relative">
-              <svg
-                fill="none"
-                height="40"
-                viewBox="0 0 40 40"
-                width="40"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* C shape */}
-                <path
-                  d="M20 4C11.163 4 4 11.163 4 20C4 28.837 11.163 36 20 36C24.418 36 28.418 34.209 31.314 31.314"
-                  fill="none"
-                  stroke="hsl(var(--primary))"
-                  strokeLinecap="round"
-                  strokeWidth="5"
-                />
-                {/* Person/dot */}
-                <circle cx="32" cy="14" fill="hsl(var(--primary))" r="5" />
-                <ellipse
-                  cx="32"
-                  cy="26"
-                  fill="hsl(var(--primary))"
-                  rx="4"
-                  ry="6"
-                />
-              </svg>
+              <Image
+                alt="Logo"
+                height={30}
+                src="/assets/white-logo.webp"
+                width={30}
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-lg font-bold text-foreground leading-tight tracking-tight">
