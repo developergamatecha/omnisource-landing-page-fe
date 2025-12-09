@@ -12,10 +12,10 @@ const links = [
 ];
 
 const legals = [
-  { label: 'Support Center', href: '#home' },
-  { label: 'FAQ', href: '#produk' },
-  { label: 'Terms & Conditions', href: '#fitur' },
-  { label: 'Privacy Policy', href: '#pricing' },
+  { label: 'Support Center', href: '#' },
+  { label: 'FAQ', href: '#' },
+  { label: 'Terms & Conditions', href: '#' },
+  { label: 'Privacy Policy', href: '#' },
 ];
 
 export function SectionContact() {
@@ -122,30 +122,36 @@ export function SectionContact() {
               </div>
             </div>
             <div className="grid grid-cols-2 mt-5 md:mt-0">
-              <ul className="flex flex-col gap-3 text-[#525b65]">
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      className="hover:text-primary duration-300 hover:font-semibold"
-                      href={link.href}
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              <ul className="flex flex-col gap-3 text-[#525b65]">
-                {legals.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      className="hover:text-primary duration-300 hover:font-semibold"
-                      href={link.href}
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <div>
+                <p className="text-lg mb-2 font-semibold text-white">Produk</p>
+                <ul className="flex flex-col gap-3 text-[#525b65]">
+                  {links.map((link) => (
+                    <li key={link.label}>
+                      <a
+                        className="hover:text-primary duration-300 hover:font-semibold"
+                        href={link.href}
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="text-lg mb-2 font-semibold text-white">Legal</p>
+                <ul className="flex flex-col gap-3 text-[#525b65]">
+                  {legals.map((link) => (
+                    <li key={link.label}>
+                      <a
+                        className="hover:text-primary duration-300 hover:font-semibold"
+                        href={link.href}
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
           {/* Year */}
