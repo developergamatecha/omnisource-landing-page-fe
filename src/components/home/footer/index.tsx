@@ -48,7 +48,7 @@ export function SectionContact() {
                   <div>
                     <p className="text-sm text-muted-foreground">Phone</p>
                     <p className="font-semibold text-foreground">
-                      +88812333499
+                      +62-813-1099-959
                     </p>
                   </div>
                 </div>
@@ -60,7 +60,7 @@ export function SectionContact() {
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
                     <p className="font-semibold text-foreground">
-                      Yourservice@gmail.com
+                      ping@gamatecha.com
                     </p>
                   </div>
                 </div>
@@ -95,7 +95,9 @@ export function SectionContact() {
                 </h3>
               </div>
               <p className="text-md font-semibold">Support Center</p>
-              <p className="text-sm">service@omnisource.id</p>
+              <a href="mailto:ping@gamatecha.com" className="text-sm">
+                ping@gamatecha.com
+              </a>
             </div>
             <div className="grid grid-cols-2 mt-5 md:mt-0">
               <ul className="flex flex-col gap-3">
