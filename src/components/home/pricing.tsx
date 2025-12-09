@@ -2,7 +2,7 @@ import { Box, Check } from 'lucide-react';
 
 import { Button } from '~/components/ui/button';
 
-export function V5Pricing() {
+export function SectionPricing() {
   const plans = [
     {
       name: 'Paket Trial',
@@ -38,7 +38,7 @@ export function V5Pricing() {
   ];
 
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden">
+    <section className="py-20 lg:py-32 relative overflow-hidden" id="pricing">
       {/* Background gradients matching V5 design */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 via-background to-emerald-500/5" />
       <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-green-500/10 rounded-full blur-[120px] pointer-events-none" />

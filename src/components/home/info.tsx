@@ -1,10 +1,8 @@
 import Image from 'next/image';
 
 import { Button } from '~/components/ui/button';
-import laptopMockup from '~/assets/v5/info-laptop.png';
-import phoneMockup from '~/assets/v5/info-phone.png';
 
-export function V5Info() {
+export function SectionInfo() {
   return (
     <section className="py-20 lg:py-32 relative overflow-hidden">
       {/* Background gradients */}
@@ -50,14 +48,18 @@ export function V5Info() {
               <Image
                 alt="Dashboard preview"
                 className="w-full max-w-lg mx-auto drop-shadow-2xl"
-                src={laptopMockup}
+                src="/assets/v5/info-laptop.png"
+                width={800}
+                height={600}
               />
 
               {/* Phone mockup overlapping */}
               <Image
                 alt="Mobile app preview"
                 className="absolute -bottom-8 -right-4 lg:right-8 w-28 lg:w-36 drop-shadow-xl"
-                src={phoneMockup}
+                src="/assets/v5/info-phone.png"
+                width={200}
+                height={400}
               />
             </div>
           </div>

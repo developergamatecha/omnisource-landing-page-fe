@@ -3,15 +3,10 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
-import featureIcon1 from '~/assets/v5/feature-icon-1.png';
-import featureIcon2 from '~/assets/v5/feature-icon-2.png';
-import featureIcon3 from '~/assets/v5/feature-icon-3.png';
-import featureIcon4 from '~/assets/v5/feature-icon-4.png';
-
 const features = [
   {
     id: 1,
-    icon: featureIcon1,
+    icon: '/assets/v5/feature-icon-1.png',
     title: 'Dashboard &  Report Comprehensive',
     description:
       'Akses diagram analitik dan pantau laporan aktivitas operasional pada bisnis outsource anda',
@@ -19,7 +14,7 @@ const features = [
   },
   {
     id: 2,
-    icon: featureIcon2,
+    icon: '/assets/v5/feature-icon-2.png',
     title: 'Payroll Automation',
     description:
       'Lakukan perhitungan gaji otomatis berdasarkan presensi dan komponen gaji untuk petugas ',
@@ -27,7 +22,7 @@ const features = [
   },
   {
     id: 3,
-    icon: featureIcon3,
+    icon: '/assets/v5/feature-icon-3.png',
     title: 'Activity Report',
     description:
       'Laporkan kegiatan mulai dari patroli, melaksanakan atensi, mengerjakan aktivitas hanya dalam beberapa langkah mudah',
@@ -35,21 +30,21 @@ const features = [
   },
   {
     id: 4,
-    icon: featureIcon4,
+    icon: '/assets/v5/feature-icon-4.png',
     title: 'Presensi Digital',
     description: 'Laporkan kehadiran dengan lebih mudah melalui aplikasi',
     gradient: 'from-blue-200 via-sky-100 to-white',
   },
   {
     id: 5,
-    icon: featureIcon1,
+    icon: '/assets/v5/feature-icon-1.png',
     title: 'HRIS & Shift Management',
     description: 'Manajemen data dan jadwal kerja petugas secara terpusat.',
     gradient: 'from-purple-200 via-violet-100 to-white',
   },
   {
     id: 6,
-    icon: featureIcon1,
+    icon: '/assets/v5/feature-icon-1.png',
     title: 'Billing & Access Control',
     description:
       'Atur dan sesuaikan paket berlangganan selaras dengan kebutuhan bisnis anda!',
@@ -57,7 +52,7 @@ const features = [
   },
 ];
 
-export function V5Features() {
+export function SectionFeatures() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -146,7 +141,7 @@ export function V5Features() {
   };
 
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden">
+    <section className="py-20 lg:py-32 relative overflow-hidden" id="fitur">
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-32 h-32 bg-primary/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-48 h-48 bg-teal-400/10 rounded-full translate-x-1/2 translate-y-1/2" />
@@ -191,6 +186,8 @@ export function V5Features() {
                     alt={feature.title}
                     className="w-full h-full object-contain drop-shadow-md"
                     src={feature.icon}
+                    width={100}
+                    height={100}
                   />
                 </div>
 

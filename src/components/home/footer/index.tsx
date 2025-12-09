@@ -2,9 +2,12 @@ import { Phone, Mail } from 'lucide-react';
 
 import { FormQuotation } from './form-quotation';
 
-export function V5Contact() {
+export function SectionContact() {
   return (
-    <section className="py-20 lg:py-32 bg-linear-to-br from-emerald-500/10 via-green-400/5 to-orange-400/10">
+    <section
+      className="py-20 lg:py-32 bg-linear-to-br from-emerald-500/10 via-green-400/5 to-orange-400/10"
+      id="contact"
+    >
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left - Content */}
@@ -18,9 +21,8 @@ export function V5Contact() {
             </h2>
 
             <p className="text-muted-foreground text-lg leading-relaxed max-w-lg">
-              In our concise Frequently Asked Questions section, we&apos;ve
-              compiled straightforward answers to address common queries about
-              our product/service.
+              Kami sangat menghargai pertanyaan lebih lanjut mengenai layanan
+              dan produk kami. Mari berkoneksi demi mencapai tujuan bersama!
             </p>
 
             {/* Contact Info */}

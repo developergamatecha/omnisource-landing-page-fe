@@ -8,8 +8,6 @@ import {
 } from 'lucide-react';
 
 import { Button } from '~/components/ui/button';
-import heroPhones1 from '~/assets/v5/hero-phones-1.png';
-import heroPhones2 from '~/assets/v5/hero-phones-2.png';
 
 const featureItems = [
   {
@@ -38,7 +36,7 @@ const featureItems = [
   },
 ];
 
-export function V5Hero() {
+export function SectionHero() {
   return (
     <section className="bg-background overflow-hidden relative" id="beranda">
       {/* Background gradient decorations */}
@@ -119,8 +117,9 @@ export function V5Hero() {
                 className="w-full lg:max-w-lg drop-shadow-2xl"
                 height={0}
                 sizes="100%"
-                src={heroPhones1}
+                src="/assets/v5/hero-phones-1.png"
                 width={0}
+                style={{ width: '100%', height: 'auto' }}
               />
             </div>
 
@@ -135,7 +134,11 @@ export function V5Hero() {
               <Image
                 alt="OmniSource Dashboard Preview"
                 className="w-full h-full drop-shadow-xl"
-                src={heroPhones2}
+                src="/assets/v5/hero-phones-2.png"
+                width={0}
+                height={0}
+                sizes="100%"
+                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               />
             </div>
 

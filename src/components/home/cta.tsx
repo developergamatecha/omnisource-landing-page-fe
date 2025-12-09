@@ -1,8 +1,6 @@
 import Image from 'next/image';
 
-import ctaPhones from '~/assets/v5/cta-phones.png';
-
-export function V5CTA() {
+export function SectionCTA() {
   return (
     <section className="py-20 lg:py-32 relative overflow-hidden">
       {/* Background gradients */}
@@ -22,7 +20,9 @@ export function V5CTA() {
               <Image
                 alt="Mobile app preview"
                 className="w-full max-w-md mx-auto drop-shadow-2xl"
-                src={ctaPhones}
+                src="/assets/v5/cta-phones.png"
+                width={500}
+                height={500}
               />
             </div>
           </div>
@@ -97,5 +97,3 @@ export function V5CTA() {
     </section>
   );
 }
-
-export default V5CTA;
