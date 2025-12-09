@@ -39,12 +39,6 @@ const featureItems = [
 export function SectionHero() {
   return (
     <section className="bg-background overflow-hidden" id="beranda">
-      {/* Background gradient decorations */}
-      {/* <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-primary/10 to-transparent pointer-events-none" />
-      <div className="absolute top-20 right-20 w-96 h-80 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-warning/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-warning/10 rounded-full blur-2xl pointer-events-none" /> */}
-
       <div className="container mx-auto px-6 pt-[6svh] pb-16 lg:pb-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-5 lg:gap-8 items-center">
           {/* Left Content */}
@@ -101,7 +95,7 @@ export function SectionHero() {
           </div>
 
           {/* Right Content - Phone Mockups */}
-          <div className="relative h-[40svh] md:h-[550px] lg:h-full justify-center lg:justify-end">
+          <div className="relative min-h-[500px] h-[40svh] md:min-h-[600px] md:h-[550px] lg:h-full justify-center lg:justify-end">
             {/* Main phone mockup */}
             <div
               className={`absolute z-10 
