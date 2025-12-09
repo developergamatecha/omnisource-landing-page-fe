@@ -49,7 +49,7 @@ export function Scene() {
     const handleResize = () => {
       // Check if tablet/mobile (< 1024px)
       if (window.innerWidth < 1024) {
-        setWidth(window.innerWidth);
+        setWidth(window.innerWidth - 50);
       } else {
         // Desktop uses container width
         setWidth('100%');
