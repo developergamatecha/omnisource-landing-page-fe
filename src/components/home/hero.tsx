@@ -112,8 +112,8 @@ export function SectionHero() {
                 height={0}
                 sizes="100%"
                 src="/assets/v5/hero-phones-1.png"
-                width={0}
                 style={{ width: '100%', height: 'auto' }}
+                width={0}
               />
             </div>
 
@@ -128,11 +128,11 @@ export function SectionHero() {
               <Image
                 alt="OmniSource Dashboard Preview"
                 className="w-full h-full drop-shadow-xl"
-                src="/assets/v5/hero-phones-2.png"
-                width={0}
                 height={0}
                 sizes="100%"
+                src="/assets/v5/hero-phones-2.png"
                 style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                width={0}
               />
             </div>
 

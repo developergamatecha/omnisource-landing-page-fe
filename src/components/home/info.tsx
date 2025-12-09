@@ -48,18 +48,18 @@ export function SectionInfo() {
               <Image
                 alt="Dashboard preview"
                 className="w-full max-w-lg mx-auto drop-shadow-2xl"
+                height={600}
                 src="/assets/v5/info-laptop.png"
                 width={800}
-                height={600}
               />
 
               {/* Phone mockup overlapping */}
               <Image
                 alt="Mobile app preview"
                 className="absolute -bottom-8 -right-4 lg:right-8 w-28 lg:w-36 drop-shadow-xl"
+                height={400}
                 src="/assets/v5/info-phone.png"
                 width={200}
-                height={400}
               />
             </div>
           </div>

@@ -1,7 +1,7 @@
 import { Phone, Mail } from 'lucide-react';
+import Image from 'next/image';
 
 import { FormQuotation } from './form-quotation';
-import Image from 'next/image';
 
 const links = [
   { label: 'Beranda', href: '#home' },
@@ -85,17 +85,17 @@ export function SectionContact() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <Image
+                  alt="Logo"
+                  height={35}
                   src="/assets/white-logo.webp"
                   width={35}
-                  height={35}
-                  alt="Logo"
                 />
                 <h3 className="text-2xl md:text-3xl font-semibold text-foreground">
                   Omnisource
                 </h3>
               </div>
               <p className="text-md font-semibold">Support Center</p>
-              <a href="mailto:ping@gamatecha.com" className="text-sm">
+              <a className="text-sm" href="mailto:ping@gamatecha.com">
                 ping@gamatecha.com
               </a>
             </div>

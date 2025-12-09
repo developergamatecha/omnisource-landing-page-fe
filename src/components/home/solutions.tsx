@@ -90,9 +90,9 @@ export function SectionSolutions() {
               <Image
                 alt="App mockup"
                 className="w-64 h-auto drop-shadow-2xl"
+                height={600}
                 src="/assets/v5/phone-center-mockup.png"
                 width={300}
-                height={600}
               />
             </div>
 
@@ -145,9 +145,9 @@ export function SectionSolutions() {
               <Image
                 alt="App mockup"
                 className="w-48 h-auto drop-shadow-2xl"
+                height={600}
                 src="/assets/v5/phone-center-mockup.png"
                 width={300}
-                height={600}
               />
             </div>
 

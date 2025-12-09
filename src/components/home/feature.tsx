@@ -185,9 +185,9 @@ export function SectionFeatures() {
                   <Image
                     alt={feature.title}
                     className="w-full h-full object-contain drop-shadow-md"
+                    height={100}
                     src={feature.icon}
                     width={100}
-                    height={100}
                   />
                 </div>
 
