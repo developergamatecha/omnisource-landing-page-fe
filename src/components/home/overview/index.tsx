@@ -1,6 +1,10 @@
+'use client';
+import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 
-import { Scene } from './laptop-model';
+const Scene = dynamic(() => import('./laptop-model').then((mod) => mod.Scene), {
+  ssr: false,
+});
 
 export function V5Product() {
   return (

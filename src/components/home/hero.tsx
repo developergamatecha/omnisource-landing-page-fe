@@ -103,12 +103,12 @@ export function V5Hero() {
           </div>
 
           {/* Right Content - Phone Mockups */}
-          <div className="relative h-[40svh] lg:h-full justify-center lg:justify-end">
+          <div className="relative h-[40svh] md:h-[550px] lg:h-full justify-center lg:justify-end">
             {/* Main phone mockup */}
             <div
               className={`absolute z-10 
-                bottom-2 md:top-0 lg:top-9
-                translate-x-1/2 md:translate-x-0 xl:translate-x-[80%]
+                bottom-2 md:top-0 lg:top-9 md:min-h-[50svh]
+                translate-x-1/2 md:-translate-x-[39%] xl:translate-x-[80%]
                 right-1/2 md:right-0 xl:right-1/2
                 w-[60%] md:w-[50%] xl:w-[42%] xl:h-full
                 animate-fade-in`}
@@ -126,7 +126,10 @@ export function V5Hero() {
 
             {/* Secondary floating phone */}
             <div
-              className="absolute  bottom-0 z-20 w-1/2 hidden md:block animate-fade-in"
+              className={`absolute bottom-0 z-20 
+                hidden lg:block animate-fade-in
+                w-1/2 md:w-1/4 lg:w-1/2
+              `}
               style={{ animationDelay: '0.4s' }}
             >
               <Image
