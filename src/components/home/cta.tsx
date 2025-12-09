@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function SectionCTA() {
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden">
+    <section className="py-20 lg:py-32 overflow-hidden">
       {/* Background gradients */}
       <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-primary/15 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-1/3 right-1/3 w-[250px] h-[250px] bg-blue-400/10 rounded-full blur-[90px] pointer-events-none" />

@@ -4,11 +4,8 @@ import { Button } from '~/components/ui/button';
 
 export function SectionInfo() {
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden">
+    <section className="py-20 lg:py-32 overflow-hidden">
       {/* Background gradients */}
-      <div className="absolute top-1/4 right-1/4 w-[300px] h-[300px] bg-green-500/15 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-1/3 left-1/3 w-[250px] h-[250px] bg-blue-400/10 rounded-full blur-[90px] pointer-events-none" />
-      <div className="absolute top-1/2 right-1/3 w-[280px] h-[280px] bg-emerald-400/10 rounded-full blur-[110px] pointer-events-none" />
 
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -39,6 +36,9 @@ export function SectionInfo() {
             style={{ animationDelay: '0.2s' }}
           >
             {/* Glow behind mockups */}
+            <div className="absolute top-1/4 -translate-y-1/2 right-1/4 w-[100px] h-[300px] bg-green-500/15 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute bottom-1/3 left-1/3 w-[250px] h-[150px] bg-blue-400/10 rounded-full blur-[90px] pointer-events-none" />
+            <div className="absolute top-1/2 right-1/3 w-[280px] h-[280px] bg-emerald-400/10 rounded-full blur-[110px] pointer-events-none" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-72 h-72 bg-primary/20 rounded-full blur-3xl" />
             </div>

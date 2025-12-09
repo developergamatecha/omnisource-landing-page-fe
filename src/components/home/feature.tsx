@@ -143,8 +143,8 @@ export function SectionFeatures() {
   return (
     <section className="py-20 lg:py-32 relative overflow-hidden" id="fitur">
       {/* Background decorations */}
-      <div className="absolute top-0 left-0 w-32 h-32 bg-primary/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-48 h-48 bg-teal-400/10 rounded-full translate-x-1/2 translate-y-1/2" />
+      <div className="absolute top-0 translate-y-1/2 left-0 w-32 h-32 bg-primary/10 rounded-full -translate-x-1/2" />
+      <div className="absolute bottom-0 right-0 w-48 h-48 bg-teal-400/10 rounded-full translate-x-1/2 -translate-y-1/2" />
 
       <div className="container mx-auto px-6">
         {/* Title */}
