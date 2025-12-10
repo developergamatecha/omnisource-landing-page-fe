@@ -1,5 +1,6 @@
 import { Box, BarChart3, Zap, Shield, HeadphonesIcon } from 'lucide-react';
 import Image from 'next/image';
+
 import { cn } from '~/lib/utils';
 
 const solutions = [

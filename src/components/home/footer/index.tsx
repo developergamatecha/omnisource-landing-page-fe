@@ -101,8 +101,8 @@ export function SectionContact() {
               <div className="flex items-center gap-4 my-3">
                 <Mail className="text-primary" />
                 <a
-                  href="mailto:ping@gamatecha.com"
                   className="text-sm font-semibold text-[#525b65]"
+                  href="mailto:ping@gamatecha.com"
                 >
                   ping@gamatecha.com
                 </a>
@@ -110,8 +110,8 @@ export function SectionContact() {
               <div className="flex items-center gap-4 my-3">
                 <Phone className="text-primary" />
                 <a
-                  href="tel:+628131099959"
                   className="text-sm font-semibold text-[#525b65]"
+                  href="tel:+628131099959"
                 >
                   +62-813-1099-959
                 </a>

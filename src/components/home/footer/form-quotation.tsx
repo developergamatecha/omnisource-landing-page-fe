@@ -27,6 +27,7 @@ export function FormQuotation() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const userAgent = navigator.userAgent;
+
     setLoading(true);
     setFormData((prev) => ({
       ...prev,
@@ -120,9 +121,9 @@ export function FormQuotation() {
 
       <Button
         className="w-full rounded-full"
+        disabled={loading}
         size="lg"
         type="submit"
-        disabled={loading}
       >
         {loading ? 'Loading...' : 'Submit'}
       </Button>
