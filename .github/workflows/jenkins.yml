@@ -13,14 +13,19 @@ on:
 
 jobs:
   on_push_to_pr:
-    if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
       - name: Trigger action
         run: |
           echo "Sukses"
+      - name: Debug
+        env:
+          EVENT: ${{ toJSON(github.event) }}
+        run: |
+          echo "EVENT CONTEXT:"
+          echo "$EVENT"
   deploy-dev:
-    if: ${{ github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'dev' }}
+    if: ${{ github.event.pull_request.merged == true && github.event.pull_request.base_ref == 'dev' }}
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Jenkins Dev Build
