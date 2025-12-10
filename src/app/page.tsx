@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <TopNavbar />
-      <main className="mx-auto min-h-screen">
+      <main className="mx-auto min-h-screen scroll-smooth">
         <SectionHero />
         <SectionProduct />
         <SectionSolutions />

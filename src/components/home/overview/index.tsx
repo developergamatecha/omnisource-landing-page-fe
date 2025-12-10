@@ -9,7 +9,7 @@ const Scene = dynamic(() => import('./laptop-model').then((mod) => mod.Scene), {
 export function SectionProduct() {
   return (
     <section
-      className="bg-background py-20 lg:py-32 w-full overflow-hidden"
+      className="relative bg-background py-20 lg:py-32 w-full overflow-hidden"
       id="produk"
     >
       {/* Background glow - green, purple, and yellow gradients */}
