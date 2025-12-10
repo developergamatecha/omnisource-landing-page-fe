@@ -2,17 +2,18 @@ name: Deploy Omnisource
 
 on:
   push:
-      branches:
-        - 'feature/**'
+    branches:
+      - 'feature/**'
   pull_request_target:
     types:
       - closed
+      - opened
     branches:
       - dev
-      # - main
 
 jobs:
   on_push_to_pr:
+    if: ${{ github.event_name == 'pull_request_target' }}
     runs-on: ubuntu-latest
     steps:
       - name: Trigger action
@@ -24,7 +25,7 @@ jobs:
         run: |
           echo "EVENT CONTEXT:"
           echo "$EVENT"
-  deploy-dev:
+  deploy_dev:
     if: ${{ github.event.pull_request.merged == true && github.event.pull_request.base_ref == 'dev' }}
     runs-on: ubuntu-latest
     steps:
