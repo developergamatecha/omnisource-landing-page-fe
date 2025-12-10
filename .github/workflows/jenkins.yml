@@ -20,7 +20,11 @@ jobs:
         run: |
           echo "Sukses"
       - name: Debug
-        run: echo "${{ toJSON(github.event.pull_request) }}"
+        env:
+          EVENT: ${{ toJSON(github.event) }}
+        run: |
+          echo "EVENT CONTEXT:"
+          echo "$EVENT"
   deploy-dev:
     if: ${{ github.event.pull_request.merged == true && github.event.pull_request.base_ref == 'dev' }}
     runs-on: ubuntu-latest
