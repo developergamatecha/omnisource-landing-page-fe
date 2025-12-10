@@ -34,8 +34,8 @@ export function SearchQuestion() {
         }}
       />
       <Button
-        onClick={handleSubmit}
         className="absolute top-1/2 right-2 -translate-y-1/2 px-3 hover:bg-teal-600 cursor-pointer"
+        onClick={handleSubmit}
       >
         <Search /> Cari
       </Button>

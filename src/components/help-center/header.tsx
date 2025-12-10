@@ -4,11 +4,14 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import { Button } from '~/components/ui/button';
+import { cn } from '~/lib/utils';
 
 export function HelpCenterHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
   const navItems = [
     { label: 'Beranda', href: '/help-center' },
     { label: 'Panduan', href: '/panduan' },
@@ -44,7 +47,10 @@ export function HelpCenterHeader() {
             {navItems.map((item) => (
               <Link
                 key={item.label}
-                className="text-muted-foreground  hover:text-primary transition-colors relative group"
+                className={cn(
+                  pathname == item.href && 'text-primary! font-semibold',
+                  'text-muted-foreground  hover:text-primary transition-colors relative group',
+                )}
                 href={item.href}
               >
                 {item.label}

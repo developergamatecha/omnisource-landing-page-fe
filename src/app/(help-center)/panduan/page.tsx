@@ -7,6 +7,7 @@ import {
   Lock,
   User,
 } from 'lucide-react';
+
 import { Button } from '~/components/ui/button';
 
 const listGuide = [
@@ -64,7 +65,7 @@ export default function PanduanPage() {
               {item.title}
             </p>
             <p>Klik ini untuk mengunduh user guide {item.title}</p>
-            <a href={item.href} className="mt-3 w-full" target="_blank">
+            <a className="mt-3 w-full" href={item.href} target="_blank">
               <Button className="w-full cursor-pointer">
                 <Download />
                 Unduh

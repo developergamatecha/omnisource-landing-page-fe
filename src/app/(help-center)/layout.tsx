@@ -9,7 +9,7 @@ export default function HelpCenterLayout({
   return (
     <>
       <HelpCenterHeader />
-      <main className="min-h-svh">{children}</main>
+      <main>{children}</main>
       <SectionContact />
     </>
   );

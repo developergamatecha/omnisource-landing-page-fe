@@ -31,7 +31,7 @@ export function FaqList() {
       setSearch(searchParamsValue.toString() || '');
     }
     if (contextParamsValue) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
+       
       setFilter(contextParamsValue.toString() || '');
     }
   }, [searchParams]);
@@ -62,7 +62,7 @@ export function FaqList() {
           {contextList.map((item, index) => (
             <Button
               key={index}
-              className={'mx-2 my-2 capitalize cursor-pointer'}
+              className="mx-2 my-2 capitalize cursor-pointer"
               size="sm"
               variant={filter != item ? 'default' : 'secondary'}
               onClick={() => setFilter(item)}
