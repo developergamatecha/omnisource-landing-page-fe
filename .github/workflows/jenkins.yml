@@ -1,15 +1,14 @@
-name: Deploy Development
+name: Deploy to Dev / Staging
 
 on:
-  pull_request_target:
-    types:
-      - closed
+  push:
     branches:
       - dev
+      - main
 
 jobs:
-  deploy_dev:
-    if: ${{ github.event_name == 'pull_request_target' && github.event.pull_request.merged == true }}
+  deploy-dev:
+    if: github.ref == 'refs/heads/dev'
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Jenkins Dev Build
@@ -18,5 +17,20 @@ jobs:
           JENKINS_DEV_BUILD_TOKEN: ${{ secrets.JENKINS_DEV_BUILD_TOKEN }}
           REPO_NAME: ${{ github.event.repository.name }}
         run: |
-          curl -v -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" \
+          echo "Deploying to Dev (branch dev)..."
+          curl -v -A "Mozilla/5.0" \
             "https://developer:${JENKINS_API}@jenkins.gamatecha.space/job/Omnisource/job/Dev/job/${REPO_NAME}/build?token=${JENKINS_DEV_BUILD_TOKEN}"
+
+  deploy-staging:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Jenkins Staging Build
+        env:
+          JENKINS_API: ${{ secrets.JENKINS_API }}
+          JENKINS_DEV_BUILD_TOKEN: ${{ secrets.JENKINS_DEV_BUILD_TOKEN }}
+          REPO_NAME: ${{ github.event.repository.name }}
+        run: |
+          echo "Deploying to Staging (branch main)..."
+          curl -v -A "Mozilla/5.0" \
+            "https://developer:${JENKINS_API}@jenkins.gamatecha.space/job/Omnisource/job/Staging/job/${REPO_NAME}/build?token=${JENKINS_DEV_BUILD_TOKEN}"
