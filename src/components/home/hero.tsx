@@ -38,7 +38,7 @@ const featureItems = [
 
 export function SectionHero() {
   return (
-    <section className="relative bg-background overflow-hidden" id="beranda">
+    <section className="relative bg-background" id="beranda">
       <div className="container mx-auto px-6 pt-[6svh] pb-16 lg:pb-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-5 lg:gap-8 items-center">
           {/* Left Content */}
@@ -89,14 +89,14 @@ export function SectionHero() {
           </div>
 
           {/* Right Content - Phone Mockups */}
-          <div className="relative min-h-[500px] h-[40svh] md:min-h-[600px] md:h-[550px] lg:h-full justify-center lg:justify-end">
+          <div className="relative min-h-[500px] h-[40svh] md:min-h-[450px] md:h-[550px] lg:h-full justify-center lg:justify-end">
             {/* Main phone mockup */}
             <div
               className={`absolute z-10 
                 bottom-2 md:top-0 lg:top-9 md:min-h-[50svh]
                 translate-x-1/2 md:-translate-x-[39%] xl:translate-x-[80%]
                 right-1/2 md:right-0 xl:right-1/2
-                w-[60%] md:w-[50%] xl:w-[42%] xl:h-full
+                w-[60%] md:w-[50%] xl:w-[42%] h-full xl:h-full
                 animate-fade-in`}
               style={{ animationDelay: '0.6s' }}
             >
@@ -154,8 +154,8 @@ export function SectionHero() {
       </div>
 
       {/* Feature Bar */}
-      <div className="container mx-auto px-6 -mt-20 relative z-30">
-        <div className="bg-white rounded-2xl shadow-xl px-8 py-6">
+      <div className="container mx-auto px-6 -mt-20 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-30">
+        <div className="bg-white rounded-2xl shadow-md px-8 py-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {featureItems.map((item, index) => (
               <div key={index} className="flex items-center gap-4">

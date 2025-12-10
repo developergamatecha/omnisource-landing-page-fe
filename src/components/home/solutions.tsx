@@ -1,5 +1,6 @@
 import { Box, BarChart3, Zap, Shield, HeadphonesIcon } from 'lucide-react';
 import Image from 'next/image';
+import { cn } from '~/lib/utils';
 
 const solutions = [
   {
@@ -7,18 +8,24 @@ const solutions = [
     icon: Box,
     title: 'All-in-One Platform',
     description: 'Web dan Mobile terintegrasi dalam satu sistem SaaS.',
+    bg: 'bg-linear-50 from-green-50 to-green-100',
+    color: 'text-green-500',
   },
   {
     id: 2,
     icon: BarChart3,
     title: 'Realtime Dashboard',
     description: 'Monitoring aktivitas, absensi, dan laporan secara instan.',
+    bg: 'bg-linear-100 from-sky-50 to-sky-100',
+    color: 'text-sky-500',
   },
   {
     id: 3,
     icon: Zap,
     title: 'Automation-Driven',
     description: 'Payroll, shift, dan laporan otomatis tanpa input manual.',
+    bg: 'bg-linear-0 from-purple-50 to-purple-100',
+    color: 'text-purple-500',
   },
   {
     id: 4,
@@ -26,6 +33,8 @@ const solutions = [
     title: 'Scalable & Secure:',
     description:
       'Sistem cloud yang dapat berkembang sesuai kebutuhan perusahaan.',
+    bg: 'bg-linear-250 from-neutral-50 to-neutral-100',
+    color: 'text-neutral-500',
   },
   {
     id: 5,
@@ -33,6 +42,8 @@ const solutions = [
     title: 'Supported Implementation',
     description:
       'Tim ahli kami siap mendampingi implementasidari awal hingga pasca go-live.',
+    bg: 'bg-linear-250 from-yellow-50 to-yellow-100',
+    color: 'text-yellow-500',
   },
 ];
 
@@ -65,7 +76,11 @@ export function SectionSolutions() {
               {solutions.slice(0, 2).map((solution, index) => (
                 <div
                   key={solution.id}
-                  className="relative bg-card rounded-2xl p-6 shadow-lg border border-border/50 animate-fade-in hover:shadow-xl transition-shadow"
+                  className={cn(
+                    solution.bg,
+                    solution.color,
+                    `relative rounded-2xl p-6 shadow-lg border border-border/50 animate-fade-in hover:shadow-xl transition-shadow`,
+                  )}
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
                   {/* Number Badge */}
@@ -101,7 +116,11 @@ export function SectionSolutions() {
               {solutions.slice(3, 5).map((solution, index) => (
                 <div
                   key={solution.id}
-                  className="relative bg-card rounded-2xl p-6 shadow-lg border border-border/50 animate-fade-in hover:shadow-xl transition-shadow"
+                  className={cn(
+                    solution.bg,
+                    solution.color,
+                    `relative rounded-2xl p-6 shadow-lg border border-border/50 animate-fade-in hover:shadow-xl transition-shadow`,
+                  )}
                   style={{ animationDelay: `${(index + 3) * 0.15}s` }}
                 >
                   {/* Number Badge */}
@@ -122,7 +141,12 @@ export function SectionSolutions() {
           {/* Bottom Center Card (Desktop) */}
           <div className="hidden lg:flex justify-center mt-8">
             <div
-              className="relative bg-card rounded-2xl p-6 shadow-lg border border-border/50 max-w-sm animate-fade-in hover:shadow-xl transition-shadow"
+              className={cn(
+                solutions[2].bg,
+                solutions[2].color,
+                'relative bg-card rounded-2xl p-6 shadow-lg border border-border/50 max-w-sm animate-fade-in hover:shadow-xl transition-shadow',
+                solutions[2].bg,
+              )}
               style={{ animationDelay: '0.45s' }}
             >
               {/* Number Badge */}
@@ -156,7 +180,11 @@ export function SectionSolutions() {
               {solutions.map((solution, index) => (
                 <div
                   key={solution.id}
-                  className="relative bg-card rounded-2xl p-6 shadow-lg border border-border/50 animate-fade-in hover:shadow-xl transition-shadow"
+                  className={cn(
+                    solution.bg,
+                    solution.color,
+                    'relative rounded-2xl p-6 shadow-lg border border-border/50 animate-fade-in hover:shadow-xl transition-shadow',
+                  )}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Number Badge */}
