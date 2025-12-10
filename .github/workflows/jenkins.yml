@@ -1,31 +1,15 @@
-name: Deploy Omnisource
+name: Deploy Development
 
 on:
-  push:
-      branches:
-        - 'feature/**'
   pull_request_target:
     types:
       - closed
     branches:
       - dev
-      # - main
 
 jobs:
-  on_push_to_pr:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Trigger action
-        run: |
-          echo "Sukses"
-      - name: Debug
-        env:
-          EVENT: ${{ toJSON(github.event) }}
-        run: |
-          echo "EVENT CONTEXT:"
-          echo "$EVENT"
-  deploy-dev:
-    if: ${{ github.event.pull_request.merged == true && github.event.pull_request.base_ref == 'dev' }}
+  deploy_dev:
+    if: ${{ github.event_name == 'pull_request_target' && github.event.pull_request.merged == true }}
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Jenkins Dev Build
@@ -36,17 +20,3 @@ jobs:
         run: |
           curl -v -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" \
             "https://developer:${JENKINS_API}@jenkins.gamatecha.space/job/Omnisource/job/Dev/job/${REPO_NAME}/build?token=${JENKINS_DEV_BUILD_TOKEN}"
-
-  # deploy-staging:
-  #   if: ${{ github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main' }}
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Trigger Jenkins Staging Build
-  #       env:
-  #         JENKINS_API: ${{ secrets.JENKINS_API }}
-  #         JENKINS_STAGING_BUILD_TOKEN: ${{ secrets.JENKINS_DEV_BUILD_TOKEN }}
-  #         REPO_NAME: ${{ github.event.repository.name }}
-  #       run: |
-  #         echo "Triggering Jenkins Main..."
-  #         curl -v -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" \
-  #           "https://developer:${JENKINS_API}@jenkins.gamatecha.space/job/Omnisource/job/Staging/job/${REPO_NAME}/build?token=${JENKINS_MAIN_BUILD_TOKEN}"
