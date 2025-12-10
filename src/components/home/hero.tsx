@@ -66,13 +66,15 @@ export function SectionHero() {
 
             {/* CTA Button */}
             <div>
-              <Button
-                className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 font-semibold shadow-lg hover:shadow-xl transition-all group"
-                size="lg"
-              >
-                Akses Platform Sekarang
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <a href={process.env.NEXT_PUBLIC_WEB_APP} target="_blank">
+                <Button
+                  className="cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 font-semibold shadow-lg hover:shadow-xl transition-all group"
+                  size="lg"
+                >
+                  Akses Platform Sekarang
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
             </div>
 
             {/* Stats */}

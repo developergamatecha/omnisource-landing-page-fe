@@ -24,10 +24,11 @@ export function SectionInfo() {
               mengelola klien dan perhitungan penggajian mudah untuk dilakukan
               pada satu platform terpusat
             </p>
-
-            <Button className="mt-4" size="lg">
-              Coba Omnisource
-            </Button>
+            <a href={process.env.NEXT_PUBLIC_WEB_APP} target="_blank">
+              <Button className="mt-4" size="lg">
+                Coba Omnisource
+              </Button>
+            </a>
           </div>
 
           {/* Right - Product Mockups */}
