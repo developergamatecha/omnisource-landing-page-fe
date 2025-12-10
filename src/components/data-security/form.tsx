@@ -15,6 +15,7 @@ import {
   SelectValue,
 } from '~/components/ui/select';
 import { dataSecuritySchema } from '~/scheme/data-security';
+import Swal from 'sweetalert2';
 
 import {
   Form,
@@ -39,7 +40,21 @@ export function FormDataSeceurity() {
     },
   });
 
-  const onSubmit = () => {};
+  const onSubmit = () => {
+    Swal.fire({
+      title: 'Permintaan Berhasil!',
+      text: 'Permintaan Anda telah kami terima. Kami akan menghubungi Anda kembali dalam maksimal 2×24 jam.',
+      icon: 'success',
+      confirmButtonColor: '#4BB04F',
+      customClass: {
+        confirmButton: 'w-full',
+      },
+    }).then((result) => {
+      if (result.isConfirmed) {
+        form.reset();
+      }
+    });
+  };
 
   return (
     <Form {...form}>
