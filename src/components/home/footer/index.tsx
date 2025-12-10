@@ -78,7 +78,7 @@ export function SectionContact() {
         </div>
       </section>
       {/* Footer Bottom */}
-      <section className="bg-[#22262a] text-white">
+      <section className="bg-[#22262a] rounded-t-3xl lg:rounded-t-[75px] text-white">
         <div className="container px-6 mx-auto">
           <div className="grid md:grid-cols-2 py-20">
             {/* Logo */}

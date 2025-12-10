@@ -38,7 +38,7 @@ const featureItems = [
 
 export function SectionHero() {
   return (
-    <section className="bg-background overflow-hidden" id="beranda">
+    <section className="relative bg-background overflow-hidden" id="beranda">
       <div className="container mx-auto px-6 pt-[6svh] pb-16 lg:pb-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-5 lg:gap-8 items-center">
           {/* Left Content */}
