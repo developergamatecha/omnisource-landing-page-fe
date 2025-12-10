@@ -15,7 +15,6 @@ import {
   SelectValue,
 } from '~/components/ui/select';
 import { dataSecuritySchema } from '~/scheme/data-security';
-import Swal from 'sweetalert2';
 
 import {
   Form,
@@ -25,8 +24,11 @@ import {
   FormLabel,
   FormMessage,
 } from '../ui/form';
+import { useState } from 'react';
+import { toast } from 'sonner';
 
 export function FormDataSeceurity() {
+  const [loading, setLoading] = useState(false);
   const form = useForm<z.infer<typeof dataSecuritySchema>>({
     resolver: zodResolver(dataSecuritySchema),
     mode: 'onChange',
@@ -41,19 +43,17 @@ export function FormDataSeceurity() {
   });
 
   const onSubmit = () => {
-    Swal.fire({
-      title: 'Permintaan Berhasil!',
-      text: 'Permintaan Anda telah kami terima. Kami akan menghubungi Anda kembali dalam maksimal 2×24 jam.',
-      icon: 'success',
-      confirmButtonColor: '#4BB04F',
-      customClass: {
-        confirmButton: 'w-full',
-      },
-    }).then((result) => {
-      if (result.isConfirmed) {
-        form.reset();
-      }
-    });
+    setLoading(true);
+
+    // delay 500ms
+    setTimeout(() => {
+      setLoading(false);
+      toast.success('Permintaan berhasil dikirim', {
+        description:
+          'Permintaan Anda telah kami terima. Kami akan menghubungi Anda kembali dalam maksimal 2×24 jam.',
+      });
+      form.reset();
+    }, 500);
   };
 
   return (
@@ -181,8 +181,9 @@ export function FormDataSeceurity() {
           className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-6 font-semibold shadow-lg hover:shadow-xl transition-all"
           size="lg"
           type="submit"
+          disabled={loading}
         >
-          Kirim
+          {loading ? 'Loading...' : 'Kirim'}
         </Button>
       </form>
     </Form>

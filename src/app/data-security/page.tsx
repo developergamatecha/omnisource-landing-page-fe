@@ -1,14 +1,8 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '~/components/ui/select';
 import { FormDataSeceurity } from '~/components/data-security/form';
+import Image from 'next/image';
 
 export default function Securities() {
   return (
@@ -23,29 +17,12 @@ export default function Securities() {
               href="/"
             >
               <div className="relative">
-                <svg
-                  fill="none"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  width="40"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M20 4C11.163 4 4 11.163 4 20C4 28.837 11.163 36 20 36C24.418 36 28.418 34.209 31.314 31.314"
-                    fill="none"
-                    stroke="hsl(var(--primary))"
-                    strokeLinecap="round"
-                    strokeWidth="5"
-                  />
-                  <circle cx="32" cy="14" fill="hsl(var(--primary))" r="5" />
-                  <ellipse
-                    cx="32"
-                    cy="26"
-                    fill="hsl(var(--primary))"
-                    rx="4"
-                    ry="6"
-                  />
-                </svg>
+                <Image
+                  src={'/assets/white-logo.webp'}
+                  alt=""
+                  width={30}
+                  height={30}
+                />
               </div>
               <div className="flex flex-col">
                 <span className="text-lg font-bold text-foreground leading-tight tracking-tight">
@@ -53,17 +30,6 @@ export default function Securities() {
                 </span>
               </div>
             </Link>
-
-            {/* Language Selector */}
-            <Select defaultValue="id">
-              <SelectTrigger className="w-[160px] bg-card border-border">
-                <SelectValue placeholder="Bahasa" />
-              </SelectTrigger>
-              <SelectContent className="bg-card border-border">
-                <SelectItem value="id">Bahasa Indonesia</SelectItem>
-                <SelectItem value="en">English</SelectItem>
-              </SelectContent>
-            </Select>
           </div>
         </div>
       </nav>
