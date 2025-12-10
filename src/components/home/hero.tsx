@@ -76,20 +76,14 @@ export function SectionHero() {
             </div>
 
             {/* Stats */}
-            <div className="flex items-center gap-8 pt-4">
+            <div className="flex items-center justify-around md:justify-start gap-10 pt-4">
               <div className="text-center">
                 <p className="text-3xl font-bold text-foreground">5000+</p>
                 <p className="text-sm text-muted-foreground">Pengguna Aktif</p>
               </div>
-              <div className="w-px h-12 bg-border" />
               <div className="text-center">
                 <p className="text-3xl font-bold text-foreground">150+</p>
                 <p className="text-sm text-muted-foreground">Perusahaan</p>
-              </div>
-              <div className="w-px h-12 bg-border" />
-              <div className="text-center">
-                <p className="text-3xl font-bold text-foreground">99%</p>
-                <p className="text-sm text-muted-foreground">Kepuasan</p>
               </div>
             </div>
           </div>
