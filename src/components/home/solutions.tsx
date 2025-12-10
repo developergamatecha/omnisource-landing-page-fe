@@ -49,7 +49,7 @@ const solutions = [
 
 export function SectionSolutions() {
   return (
-    <section className="py-20 lg:py-32 overflow-hidden bg-background">
+    <section className="py-16 lg:py-10 overflow-hidden bg-background">
       {/* Background green and soft blue gradients */}
       <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-green-500/15 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[350px] h-[350px] bg-sky-400/10 rounded-full blur-[100px] pointer-events-none" />
