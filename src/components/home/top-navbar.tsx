@@ -25,10 +25,10 @@ export function TopNavbar() {
           <div className="flex items-center gap-3 group cursor-pointer">
             <div className="relative">
               <Image
-                src="/assets/white-logo.webp"
                 alt="Logo"
-                width={30}
                 height={30}
+                src="/assets/white-logo.webp"
+                width={30}
               />
             </div>
             <div className="flex flex-col">

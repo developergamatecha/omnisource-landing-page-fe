@@ -1,7 +1,7 @@
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, Map } from 'lucide-react';
+import Image from 'next/image';
 
 import { FormQuotation } from './form-quotation';
-import Image from 'next/image';
 
 const links = [
   { label: 'Beranda', href: '#home' },
@@ -12,10 +12,10 @@ const links = [
 ];
 
 const legals = [
-  { label: 'Support Center', href: '#home' },
-  { label: 'FAQ', href: '#produk' },
-  { label: 'Terms & Conditions', href: '#fitur' },
-  { label: 'Privacy Policy', href: '#pricing' },
+  { label: 'Support Center', href: '#' },
+  { label: 'FAQ', href: '#' },
+  { label: 'Terms & Conditions', href: '#' },
+  { label: 'Privacy Policy', href: '#' },
 ];
 
 export function SectionContact() {
@@ -78,58 +78,86 @@ export function SectionContact() {
         </div>
       </section>
       {/* Footer Bottom */}
-      <section className="bg-primary/9 rounded-t-[30px] md:rounded-t-[80px]">
+      <section className="bg-[#22262a] rounded-t-3xl lg:rounded-t-[75px] text-white">
         <div className="container px-6 mx-auto">
           <div className="grid md:grid-cols-2 py-20">
             {/* Logo */}
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <Image
+                  alt="Logo"
+                  height={35}
                   src="/assets/white-logo.webp"
                   width={35}
-                  height={35}
-                  alt="Logo"
                 />
-                <h3 className="text-2xl md:text-3xl font-semibold text-foreground">
+                <h3 className="text-2xl md:text-3xl font-semibold text-white text-foreground">
                   Omnisource
                 </h3>
               </div>
-              <p className="text-md font-semibold">Support Center</p>
-              <a href="mailto:ping@gamatecha.com" className="text-sm">
-                ping@gamatecha.com
-              </a>
+              <p className="text-sm text-[#525b65] lg:w-3/4 mb-5">
+                Platform manajemen terpercaya untuk mengoptimalkan bisnis Anda
+                dengan solusi yang inovatif dan terintegrasi
+              </p>
+              <div className="flex items-center gap-4 my-3">
+                <Mail className="text-primary" />
+                <a
+                  className="text-sm font-semibold text-[#525b65]"
+                  href="mailto:ping@gamatecha.com"
+                >
+                  ping@gamatecha.com
+                </a>
+              </div>
+              <div className="flex items-center gap-4 my-3">
+                <Phone className="text-primary" />
+                <a
+                  className="text-sm font-semibold text-[#525b65]"
+                  href="tel:+628131099959"
+                >
+                  +62-813-1099-959
+                </a>
+              </div>
+              <div className="flex items-center gap-4 my-3">
+                <Map className="text-primary" />
+                <span className="text-[#525b65]">Malang, Indonesia</span>
+              </div>
             </div>
             <div className="grid grid-cols-2 mt-5 md:mt-0">
-              <ul className="flex flex-col gap-3">
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      className="hover:text-primary duration-300 hover:font-semibold"
-                      href={link.href}
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              <ul className="flex flex-col gap-3">
-                {legals.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      className="hover:text-primary duration-300 hover:font-semibold"
-                      href={link.href}
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <div>
+                <p className="text-lg mb-2 font-semibold text-white">Produk</p>
+                <ul className="flex flex-col gap-3 text-[#525b65]">
+                  {links.map((link) => (
+                    <li key={link.label}>
+                      <a
+                        className="hover:text-primary duration-300 hover:font-semibold"
+                        href={link.href}
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="text-lg mb-2 font-semibold text-white">Legal</p>
+                <ul className="flex flex-col gap-3 text-[#525b65]">
+                  {legals.map((link) => (
+                    <li key={link.label}>
+                      <a
+                        className="hover:text-primary duration-300 hover:font-semibold"
+                        href={link.href}
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
           {/* Year */}
-          <div className="flex items-center justify-center pb-5">
-            <p className="text-muted-foreground text-sm">
-              ©2025 Omnisource. All rights reserved.
+          <div className="flex items-center justify-center pb-5 border-t border-[#525b65] pt-5">
+            <p className="text-gray-400 text-sm">
+              ©2025 dibuat oleh PT Gamatecha Nusantara
             </p>
           </div>
         </div>

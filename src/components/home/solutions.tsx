@@ -1,24 +1,32 @@
 import { Box, BarChart3, Zap, Shield, HeadphonesIcon } from 'lucide-react';
 import Image from 'next/image';
 
+import { cn } from '~/lib/utils';
+
 const solutions = [
   {
     id: 1,
     icon: Box,
     title: 'All-in-One Platform',
     description: 'Web dan Mobile terintegrasi dalam satu sistem SaaS.',
+    bg: 'bg-linear-50 from-green-50 to-green-100',
+    color: 'text-green-500',
   },
   {
     id: 2,
     icon: BarChart3,
     title: 'Realtime Dashboard',
     description: 'Monitoring aktivitas, absensi, dan laporan secara instan.',
+    bg: 'bg-linear-100 from-sky-50 to-sky-100',
+    color: 'text-sky-500',
   },
   {
     id: 3,
     icon: Zap,
     title: 'Automation-Driven',
     description: 'Payroll, shift, dan laporan otomatis tanpa input manual.',
+    bg: 'bg-linear-0 from-purple-50 to-purple-100',
+    color: 'text-purple-500',
   },
   {
     id: 4,
@@ -26,6 +34,8 @@ const solutions = [
     title: 'Scalable & Secure:',
     description:
       'Sistem cloud yang dapat berkembang sesuai kebutuhan perusahaan.',
+    bg: 'bg-linear-250 from-neutral-50 to-neutral-100',
+    color: 'text-neutral-500',
   },
   {
     id: 5,
@@ -33,12 +43,14 @@ const solutions = [
     title: 'Supported Implementation',
     description:
       'Tim ahli kami siap mendampingi implementasidari awal hingga pasca go-live.',
+    bg: 'bg-linear-250 from-yellow-50 to-yellow-100',
+    color: 'text-yellow-500',
   },
 ];
 
 export function SectionSolutions() {
   return (
-    <section className="py-20 lg:py-32 overflow-hidden bg-background">
+    <section className="py-16 lg:py-10 overflow-hidden bg-background">
       {/* Background green and soft blue gradients */}
       <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-green-500/15 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[350px] h-[350px] bg-sky-400/10 rounded-full blur-[100px] pointer-events-none" />
@@ -65,7 +77,11 @@ export function SectionSolutions() {
               {solutions.slice(0, 2).map((solution, index) => (
                 <div
                   key={solution.id}
-                  className="relative bg-card rounded-2xl p-6 shadow-lg border border-border/50 animate-fade-in hover:shadow-xl transition-shadow"
+                  className={cn(
+                    solution.bg,
+                    solution.color,
+                    `relative rounded-2xl p-6 shadow-lg border border-border/50 animate-fade-in hover:shadow-xl transition-shadow`,
+                  )}
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
                   {/* Number Badge */}
@@ -90,9 +106,9 @@ export function SectionSolutions() {
               <Image
                 alt="App mockup"
                 className="w-64 h-auto drop-shadow-2xl"
+                height={600}
                 src="/assets/v5/phone-center-mockup.png"
                 width={300}
-                height={600}
               />
             </div>
 
@@ -101,7 +117,11 @@ export function SectionSolutions() {
               {solutions.slice(3, 5).map((solution, index) => (
                 <div
                   key={solution.id}
-                  className="relative bg-card rounded-2xl p-6 shadow-lg border border-border/50 animate-fade-in hover:shadow-xl transition-shadow"
+                  className={cn(
+                    solution.bg,
+                    solution.color,
+                    `relative rounded-2xl p-6 shadow-lg border border-border/50 animate-fade-in hover:shadow-xl transition-shadow`,
+                  )}
                   style={{ animationDelay: `${(index + 3) * 0.15}s` }}
                 >
                   {/* Number Badge */}
@@ -122,7 +142,12 @@ export function SectionSolutions() {
           {/* Bottom Center Card (Desktop) */}
           <div className="hidden lg:flex justify-center mt-8">
             <div
-              className="relative bg-card rounded-2xl p-6 shadow-lg border border-border/50 max-w-sm animate-fade-in hover:shadow-xl transition-shadow"
+              className={cn(
+                solutions[2].bg,
+                solutions[2].color,
+                'relative bg-card rounded-2xl p-6 shadow-lg border border-border/50 max-w-sm animate-fade-in hover:shadow-xl transition-shadow',
+                solutions[2].bg,
+              )}
               style={{ animationDelay: '0.45s' }}
             >
               {/* Number Badge */}
@@ -145,9 +170,9 @@ export function SectionSolutions() {
               <Image
                 alt="App mockup"
                 className="w-48 h-auto drop-shadow-2xl"
+                height={600}
                 src="/assets/v5/phone-center-mockup.png"
                 width={300}
-                height={600}
               />
             </div>
 
@@ -156,7 +181,11 @@ export function SectionSolutions() {
               {solutions.map((solution, index) => (
                 <div
                   key={solution.id}
-                  className="relative bg-card rounded-2xl p-6 shadow-lg border border-border/50 animate-fade-in hover:shadow-xl transition-shadow"
+                  className={cn(
+                    solution.bg,
+                    solution.color,
+                    'relative rounded-2xl p-6 shadow-lg border border-border/50 animate-fade-in hover:shadow-xl transition-shadow',
+                  )}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Number Badge */}

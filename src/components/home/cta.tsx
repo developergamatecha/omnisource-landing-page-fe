@@ -20,9 +20,9 @@ export function SectionCTA() {
               <Image
                 alt="Mobile app preview"
                 className="w-full max-w-md mx-auto drop-shadow-2xl"
+                height={500}
                 src="/assets/v5/cta-phones.png"
                 width={500}
-                height={500}
               />
             </div>
           </div>
