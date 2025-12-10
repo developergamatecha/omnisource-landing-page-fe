@@ -13,7 +13,6 @@ on:
 
 jobs:
   on_push_to_pr:
-    if: ${{ github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
       - name: Trigger action
