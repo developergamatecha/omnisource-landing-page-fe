@@ -35,7 +35,7 @@ export default function Securities() {
       </nav>
 
       {/* Hero Section - V5 Style with Gradient */}
-      <section className="relative py-16 lg:py-20 overflow-hidden">
+      <section className="relative py-16 lg:pt-20 min-h-[550px] h-[80svh] overflow-hidden">
         {/* Background gradients matching V5 design */}
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-background to-orange-400/10" />
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[150px] pointer-events-none" />
@@ -94,12 +94,12 @@ export default function Securities() {
       </section>
 
       {/* Form Section */}
-      <section className="relative pb-20 overflow-hidden">
+      <section className="relative">
         {/* Continuing gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-orange-400/5 via-background to-emerald-500/10" />
         <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-6 relative z-10 -translate-y-[20svh]">
           <div className="max-w-3xl mx-auto">
             {/* Form Card - V5 Style */}
             <div
