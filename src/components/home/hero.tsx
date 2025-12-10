@@ -76,7 +76,7 @@ export function SectionHero() {
             </div>
 
             {/* Stats */}
-            <div className="flex items-center justify-around md:justify-start gap-10 pt-4">
+            <div className="flex items-center justify-around md:justify-start gap-10 pt-4 pb-10">
               <div className="text-center">
                 <p className="text-3xl font-bold text-foreground">5000+</p>
                 <p className="text-sm text-muted-foreground">Pengguna Aktif</p>
@@ -94,9 +94,9 @@ export function SectionHero() {
             <div
               className={`absolute z-10 
                 bottom-2 md:top-0 lg:top-9 md:min-h-[50svh]
-                translate-x-1/2 md:-translate-x-[39%] xl:translate-x-[80%]
-                right-1/2 md:right-0 xl:right-1/2
-                w-[60%] md:w-[50%] xl:w-[42%] h-full xl:h-full
+                translate-x-1/2 md:translate-x-[50%] xl:translate-x-[80%]
+                right-1/2 md:right-[50%] xl:right-1/2
+                w-1/2 md:w-[40%] xl:w-[42%] h-full xl:h-full
                 animate-fade-in`}
               style={{ animationDelay: '0.6s' }}
             >
@@ -154,8 +154,8 @@ export function SectionHero() {
       </div>
 
       {/* Feature Bar */}
-      <div className="container mx-auto px-6 -mt-20 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-30">
-        <div className="bg-white rounded-2xl shadow-md px-8 py-6">
+      <div className="container mx-auto px-6 -mt-20 absolute bottom-0 left-1/2 -translate-x-1/2 z-30">
+        <div className="bg-white rounded-2xl shadow-lg px-8 py-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {featureItems.map((item, index) => (
               <div key={index} className="flex items-center gap-4">
