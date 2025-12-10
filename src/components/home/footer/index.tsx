@@ -93,7 +93,7 @@ export function SectionContact() {
                   Omnisource
                 </h3>
               </div>
-              <p className="text-sm text-[#525b65] lg:w-3/4 mb-5">
+              <p className="text-sm text-[#626b75] lg:w-3/4 mb-5">
                 Ruko De Castello, Jl Simpang Sulfat Selatan No 4B, Kelurahan
                 Pandanwangi, Kecamatan Blimbing, Kota Malang, Jawa Timur,
                 Indonesia (65124)
@@ -101,7 +101,7 @@ export function SectionContact() {
               <div className="flex items-center gap-4 my-3">
                 <Mail className="text-primary" />
                 <a
-                  className="text-sm font-semibold text-[#525b65]"
+                  className="text-sm font-semibold text-[#626b75]"
                   href="mailto:ping@gamatecha.com"
                 >
                   ping@gamatecha.com
