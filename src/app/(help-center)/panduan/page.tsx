@@ -14,32 +14,32 @@ const listGuide = [
   {
     icon: <User className="w-10 h-10 text-primary" />,
     title: 'Web Owner',
-    href: '/help-center/panduan',
+    href: 'https://drive.google.com/file/d/1VW9Vc6TFcEEfPmEWxhKkCt-G_wg-q6oH/view?usp=drive_link',
   },
   {
     icon: <Key className="w-10 h-10 text-primary" />,
     title: 'Web Admin',
-    href: '/help-center/panduan',
+    href: 'https://drive.google.com/file/d/1lauhiVRHrhsCynTb4VUpBPXZeHTABzBF/view?usp=drive_link',
   },
   {
     icon: <Eye className="w-10 h-10 text-primary" />,
     title: 'Pengawas',
-    href: '/help-center/panduan',
+    href: 'https://drive.google.com/file/d/1pN5nSPg-qr1CC_hTYdgPZMkWxo80DxJh/view?usp=drive_link',
   },
   {
     icon: <Lock className="w-10 h-10 text-primary" />,
     title: 'Keamanan',
-    href: '/help-center/panduan',
+    href: 'https://drive.google.com/file/d/1fqY-bInlVmrf7ewRLnIr9g7hw1uFMR4R/view?usp=drive_link',
   },
   {
     icon: <BrushCleaning className="w-10 h-10 text-primary" />,
     title: 'Kebersihan',
-    href: '/help-center/panduan',
+    href: 'https://drive.google.com/file/d/1Vx_UW2T5-ZkbZNsITGplqqDRMqnw9OdW/view?usp=drive_link',
   },
   {
     icon: <Group className="w-10 h-10 text-primary" />,
     title: 'Umum',
-    href: '/help-center/panduan',
+    href: 'https://drive.google.com/file/d/18Tzea8hPu5kgH7J1crXjAdjNnhlAKHov/view?usp=drive_link',
   },
 ];
 
