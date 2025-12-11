@@ -12,10 +12,12 @@ const links = [
 ];
 
 const legals = [
-  { label: 'Support Center', href: '#' },
-  { label: 'FAQ', href: '#' },
-  { label: 'Terms & Conditions', href: '#' },
-  { label: 'Privacy Policy', href: '#' },
+  {
+    label: 'Support Center',
+    href: 'https://dev-omnisource-help-center.gamatecha.space/',
+  },
+  { label: 'Terms & Conditions', href: '/terms' },
+  { label: 'Privacy Policy', href: '/privacy-policy' },
 ];
 
 export function SectionContact() {
