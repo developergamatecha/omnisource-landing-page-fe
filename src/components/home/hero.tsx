@@ -50,7 +50,7 @@ export function SectionHero() {
             {/* Badge */}
             <div className="inline-block">
               <span className="bg-muted text-muted-foreground text-sm font-medium px-4 py-2 rounded-full">
-                Platform Manajemen Terbaik
+                Platform Manajemen Outsource
               </span>
             </div>
 
@@ -84,12 +84,14 @@ export function SectionHero() {
             {/* Stats */}
             <div className="flex items-center justify-around md:justify-start gap-10 pt-4 pb-10">
               <div className="text-center">
-                <p className="text-3xl font-bold text-foreground">5000+</p>
-                <p className="text-sm text-muted-foreground">Pengguna Aktif</p>
+                <p className="text-3xl font-bold text-foreground">200+</p>
+                <p className="text-sm text-muted-foreground">
+                  Pengguna Layanan
+                </p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-bold text-foreground">150+</p>
-                <p className="text-sm text-muted-foreground">Perusahaan</p>
+                <p className="text-3xl font-bold text-foreground">15+</p>
+                <p className="text-sm text-muted-foreground">Klien Terlayani</p>
               </div>
             </div>
           </div>
