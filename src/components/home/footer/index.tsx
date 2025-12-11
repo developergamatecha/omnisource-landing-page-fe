@@ -14,7 +14,7 @@ const links = [
 const legals = [
   {
     label: 'Support Center',
-    href: 'https://dev-omnisource-help-center.gamatecha.space/',
+    href: '/help-center',
   },
   { label: 'Terms & Conditions', href: '/terms' },
   { label: 'Privacy Policy', href: '/privacy-policy' },
