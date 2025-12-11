@@ -2,8 +2,8 @@ name: Deploy Omnisource
 
 on:
   push:
-      branches:
-        - 'feature/**'
+    branches:
+      - 'feature/**'
   pull_request_target:
     types:
       - closed
@@ -25,7 +25,9 @@ jobs:
           echo "EVENT CONTEXT:"
           echo "$EVENT"
   deploy-dev:
-    if: ${{ github.event.pull_request.merged == true && github.event.pull_request.base_ref == 'dev' }}
+    if:
+      ${{ github.event.pull_request.merged == true &&
+      github.event.pull_request.base_ref == 'dev' }}
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Jenkins Dev Build
