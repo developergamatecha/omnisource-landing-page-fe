@@ -50,7 +50,7 @@ export function SectionHero() {
             {/* Badge */}
             <div className="inline-block">
               <span className="bg-muted text-muted-foreground text-sm font-medium px-4 py-2 rounded-full">
-                Platform Manajemen Terbaik
+                Platform Manajemen Outsource
               </span>
             </div>
 
