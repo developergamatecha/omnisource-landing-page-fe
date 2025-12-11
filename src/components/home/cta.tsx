@@ -33,7 +33,7 @@ export function SectionCTA() {
             style={{ animationDelay: '0.2s' }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-              Omnisource <span className="text-primary">App</span>
+              Omnisource <span className="text-primary">Mobile</span>
             </h2>
 
             <p className="text-muted-foreground text-lg leading-relaxed">
@@ -50,7 +50,8 @@ export function SectionCTA() {
               {/* Google Play Button */}
               <a
                 className="inline-flex items-center gap-3 bg-black text-white px-5 py-3 rounded-lg hover:bg-black/80 transition-colors"
-                href="#"
+                href={process.env.NEXT_PUBLIC_PlAYSTORE_URL}
+                target="_blank"
               >
                 <svg
                   className="w-7 h-7"
@@ -72,7 +73,8 @@ export function SectionCTA() {
               {/* App Store Button */}
               <a
                 className="inline-flex items-center gap-3 bg-black text-white px-5 py-3 rounded-lg hover:bg-black/80 transition-colors"
-                href="#"
+                href={process.env.NEXT_PUBLIC_APPSTORE_URL}
+                target="_blank"
               >
                 <svg
                   className="w-7 h-7"

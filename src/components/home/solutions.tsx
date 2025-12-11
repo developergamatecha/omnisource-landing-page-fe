@@ -64,7 +64,10 @@ export function SectionSolutions() {
             Temukan <span className="text-primary">Solusi Kami</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit:
+            Kami menyediakan segala hal mulai dari konsultasi platform, panduan
+            penggunaan fitur, dan dukungan berkelanjutan, semuanya dirancang
+            untuk mendorong kemajuan bisnis Anda. Mari akses omnisource, capai
+            tujuan ideal!
           </p>
         </div>
 
