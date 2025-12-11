@@ -14,32 +14,32 @@ const listGuide = [
   {
     icon: <User className="w-10 h-10 text-primary" />,
     title: 'Web Owner',
-    href: 'https://drive.google.com/file/d/1VW9Vc6TFcEEfPmEWxhKkCt-G_wg-q6oH/view?usp=drive_link',
+    href: '/assets/docs/User_Guide_Admin.pdf',
   },
   {
     icon: <Key className="w-10 h-10 text-primary" />,
     title: 'Web Admin',
-    href: 'https://drive.google.com/file/d/1lauhiVRHrhsCynTb4VUpBPXZeHTABzBF/view?usp=drive_link',
+    href: '/assets/docs/User_Guide_Owner.pdf',
   },
   {
     icon: <Eye className="w-10 h-10 text-primary" />,
     title: 'Pengawas',
-    href: 'https://drive.google.com/file/d/1pN5nSPg-qr1CC_hTYdgPZMkWxo80DxJh/view?usp=drive_link',
+    href: '/assets/docs/User_Guide_Pengawas.pdf',
   },
   {
     icon: <Lock className="w-10 h-10 text-primary" />,
     title: 'Keamanan',
-    href: 'https://drive.google.com/file/d/1fqY-bInlVmrf7ewRLnIr9g7hw1uFMR4R/view?usp=drive_link',
+    href: '/assets/docs/User_Guide_Keamanan.pdf',
   },
   {
     icon: <BrushCleaning className="w-10 h-10 text-primary" />,
     title: 'Kebersihan',
-    href: 'https://drive.google.com/file/d/1Vx_UW2T5-ZkbZNsITGplqqDRMqnw9OdW/view?usp=drive_link',
+    href: '/assets/docs/User_Guide_Kebersihan.pdf',
   },
   {
     icon: <Group className="w-10 h-10 text-primary" />,
     title: 'Umum',
-    href: 'https://drive.google.com/file/d/18Tzea8hPu5kgH7J1crXjAdjNnhlAKHov/view?usp=drive_link',
+    href: '/assets/docs/User_Guide_Umum.pdf',
   },
 ];
 
