@@ -10,11 +10,11 @@ export function TopNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { label: 'Beranda', href: '#beranda' },
-    { label: 'Produk Kami', href: '#produk' },
-    { label: 'Fitur', href: '#fitur' },
-    { label: 'Pricing', href: '#pricing' },
-    { label: 'Contact Us', href: '#contact' },
+    { label: 'Beranda', href: '/#beranda' },
+    { label: 'Produk Kami', href: '/#produk' },
+    { label: 'Fitur', href: '/#fitur' },
+    { label: 'Pricing', href: '/#pricing' },
+    { label: 'Contact Us', href: '/#contact' },
   ];
 
   return (
