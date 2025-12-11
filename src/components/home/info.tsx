@@ -12,7 +12,7 @@ export function SectionInfo() {
           {/* Left - Content */}
           <div className="space-y-6 animate-fade-in order-2 lg:order-1">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-              Omnisource <span className="text-primary">Desktop</span>
+              Omnisource <span className="text-primary">Web App</span>
             </h2>
 
             <p className="text-muted-foreground text-lg leading-relaxed">
@@ -24,10 +24,11 @@ export function SectionInfo() {
               mengelola klien dan perhitungan penggajian mudah untuk dilakukan
               pada satu platform terpusat
             </p>
-
-            <Button className="mt-4" size="lg">
-              Coba Omnisource
-            </Button>
+            <a href={process.env.NEXT_PUBLIC_WEB_APP} target="_blank">
+              <Button className="mt-4" size="lg">
+                Coba Omnisource
+              </Button>
+            </a>
           </div>
 
           {/* Right - Product Mockups */}

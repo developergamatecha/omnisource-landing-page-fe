@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(rubik.className, '')}>
+      <body className={cn(rubik.className, 'relative')}>
         {children}
         <Toaster />
       </body>

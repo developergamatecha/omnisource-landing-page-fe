@@ -39,6 +39,10 @@ const featureItems = [
 export function SectionHero() {
   return (
     <section className="relative bg-background" id="beranda">
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l rounded-full blur-2xl from-primary/10 to-transparent pointer-events-none" />
+      <div className="absolute top-20 right-20 w-96 h-80 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="w-80 h-80 bg-orange-400 opacity-10 absolute top-[60vh] blur-3xl -translate-y-1/2 left-10"></div>
+      <div className="w-80 h-80 bg-yellow-400 opacity-10 absolute top-[75vh] blur-3xl -translate-y-3/4 left-1/3"></div>
       <div className="container mx-auto px-6 pt-[6svh] pb-16 lg:pb-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-5 lg:gap-8 items-center">
           {/* Left Content */}
@@ -66,13 +70,15 @@ export function SectionHero() {
 
             {/* CTA Button */}
             <div>
-              <Button
-                className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 font-semibold shadow-lg hover:shadow-xl transition-all group"
-                size="lg"
-              >
-                Akses Platform Sekarang
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <a href={process.env.NEXT_PUBLIC_WEB_APP} target="_blank">
+                <Button
+                  className="cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 font-semibold shadow-lg hover:shadow-xl transition-all group"
+                  size="lg"
+                >
+                  Akses Platform Sekarang
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
             </div>
 
             {/* Stats */}

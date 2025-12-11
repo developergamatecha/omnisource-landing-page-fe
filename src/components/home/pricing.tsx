@@ -16,6 +16,7 @@ export function SectionPricing() {
         'Akses fitur dasar',
         'Support email',
       ],
+      href: process.env.NEXT_PUBLIC_WEB_APP + '/auth/register',
       popular: false,
       buttonText: 'Mulai Trial Gratis',
     },
@@ -32,6 +33,7 @@ export function SectionPricing() {
         'Dashboard real-time',
         'Support 24/7',
       ],
+      href: process.env.NEXT_PUBLIC_WEB_APP + '/auth/login',
       popular: true,
       buttonText: 'Pilih Paket',
     },
@@ -123,13 +125,15 @@ export function SectionPricing() {
                 </ul>
 
                 {/* Button */}
-                <Button
-                  className={`w-full ${plan.popular ? '' : ''}`}
-                  size="lg"
-                  variant={plan.popular ? 'default' : 'outline'}
-                >
-                  {plan.buttonText}
-                </Button>
+                <a href={process.env.NEXT_PUBLIC_WEB_APP} target="_blank">
+                  <Button
+                    className={`w-full cursor-pointer ${plan.popular ? '' : ''}`}
+                    size="lg"
+                    variant={plan.popular ? 'default' : 'outline'}
+                  >
+                    {plan.buttonText}
+                  </Button>
+                </a>
               </div>
             </div>
           ))}
