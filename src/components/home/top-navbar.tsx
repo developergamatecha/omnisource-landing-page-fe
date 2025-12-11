@@ -54,9 +54,14 @@ export function TopNavbar() {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6 font-semibold shadow-md hover:shadow-lg transition-all">
-              Mulai Akses
-            </Button>
+            <a
+              href={process.env.NEXT_PUBLIC_WEB_APP + 'auth/register'}
+              target="_blank"
+            >
+              <Button className="bg-primary cursor-pointer text-primary-foreground hover:bg-primary/90 rounded-full px-6 font-semibold shadow-md hover:shadow-lg transition-all">
+                Daftar Sekarang
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -88,9 +93,14 @@ export function TopNavbar() {
                   {item.label}
                 </a>
               ))}
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full font-semibold mt-2">
-                Mulai Akses
-              </Button>
+              <a
+                href={process.env.NEXT_PUBLIC_WEB_APP + 'auth/register'}
+                target="_blank"
+              >
+                <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full font-semibold mt-2">
+                  Daftar Sekarang
+                </Button>
+              </a>
             </div>
           </div>
         )}

@@ -4,6 +4,7 @@ import '~/styles/globals.css';
 import { Rubik } from 'next/font/google';
 
 import { Toaster } from '~/components/ui/sonner';
+import { cn } from '~/lib/utils';
 
 export const metadata: Metadata = {
   title: 'OmniSource - One Platform to Manage All Your Outsourcing Operations',
@@ -23,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={rubik.className}>
+      <body className={cn(rubik.className, 'relative')}>
         {children}
         <Toaster />
       </body>

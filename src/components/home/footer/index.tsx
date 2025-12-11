@@ -13,7 +13,6 @@ const links = [
 
 const legals = [
   { label: 'Support Center', href: '#' },
-  { label: 'FAQ', href: '#' },
   { label: 'Terms & Conditions', href: '#' },
   { label: 'Privacy Policy', href: '#' },
 ];
@@ -78,7 +77,7 @@ export function SectionContact() {
         </div>
       </section>
       {/* Footer Bottom */}
-      <section className="bg-[#22262a] text-white">
+      <section className="bg-[#22262a] rounded-t-3xl lg:rounded-t-[75px] text-white">
         <div className="container px-6 mx-auto">
           <div className="grid md:grid-cols-2 py-20">
             {/* Logo */}
@@ -94,15 +93,16 @@ export function SectionContact() {
                   Omnisource
                 </h3>
               </div>
-              <p className="text-sm text-[#525b65] lg:w-3/4 mb-5">
-                Platform manajemen terpercaya untuk mengoptimalkan bisnis Anda
-                dengan solusi yang inovatif dan terintegrasi
+              <p className="text-sm text-[#626b75] lg:w-3/4 mb-5">
+                Ruko De Castello, Jl Simpang Sulfat Selatan No 4B, Kelurahan
+                Pandanwangi, Kecamatan Blimbing, Kota Malang, Jawa Timur,
+                Indonesia (65124)
               </p>
               <div className="flex items-center gap-4 my-3">
                 <Mail className="text-primary" />
                 <a
+                  className="text-sm font-semibold text-[#626b75]"
                   href="mailto:ping@gamatecha.com"
-                  className="text-sm font-semibold text-[#525b65]"
                 >
                   ping@gamatecha.com
                 </a>
@@ -110,8 +110,8 @@ export function SectionContact() {
               <div className="flex items-center gap-4 my-3">
                 <Phone className="text-primary" />
                 <a
-                  href="tel:+628131099959"
                   className="text-sm font-semibold text-[#525b65]"
+                  href="tel:+628131099959"
                 >
                   +62-813-1099-959
                 </a>
@@ -157,7 +157,7 @@ export function SectionContact() {
           {/* Year */}
           <div className="flex items-center justify-center pb-5 border-t border-[#525b65] pt-5">
             <p className="text-gray-400 text-sm">
-              ©2025 dibuat oleh PT Gamatecha Nusantara
+              ©PT Gamatecha Solusi Nusantara . All Rights Reserved
             </p>
           </div>
         </div>
