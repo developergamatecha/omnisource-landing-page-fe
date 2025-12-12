@@ -2,6 +2,7 @@
 
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 
 import { Input } from '~/components/ui/input';
 import {
@@ -14,7 +15,6 @@ import {
 import { Button } from '~/components/ui/button';
 import { contactUsSchema } from '~/scheme/contact-us';
 import { Form, FormField, FormItem, FormMessage } from '~/components/ui/form';
-import { z } from 'zod';
 
 export function FormQuotation() {
   const form = useForm({
@@ -33,12 +33,13 @@ export function FormQuotation() {
     const mailtoLink = `mailto:ping@gamatecha.com?subject=Quotation Request&body=${encodeURIComponent(
       JSON.stringify(data, null, 2),
     )}`;
+
     window.open(mailtoLink, '_blank');
   };
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form className="space-y-6" onSubmit={form.handleSubmit(onSubmit)}>
         <FormField
           control={form.control}
           name="firstName"

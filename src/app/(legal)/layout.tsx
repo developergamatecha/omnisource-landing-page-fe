@@ -1,4 +1,4 @@
-import { SectionContact } from '~/components/home/footer';
+import { MainFooter } from '~/components/footer';
 import { TopNavbar } from '~/components/home/top-navbar';
 
 export default function LegalLayout({
@@ -10,7 +10,7 @@ export default function LegalLayout({
     <>
       <TopNavbar />
       <main className="min-h-screen">{children}</main>
-      <SectionContact />
+      <MainFooter />
     </>
   );
 }
