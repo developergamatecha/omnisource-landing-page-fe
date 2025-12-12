@@ -3,6 +3,8 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import { useState } from 'react';
+import { toast } from 'sonner';
 
 import { Button } from '~/components/ui/button';
 import { Input } from '~/components/ui/input';
@@ -24,8 +26,6 @@ import {
   FormLabel,
   FormMessage,
 } from '../ui/form';
-import { useState } from 'react';
-import { toast } from 'sonner';
 
 export function FormDataSeceurity() {
   const [loading, setLoading] = useState(false);
@@ -58,7 +58,7 @@ export function FormDataSeceurity() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form className="space-y-6" onSubmit={form.handleSubmit(onSubmit)}>
         {/* User Type */}
         <FormField
           control={form.control}
@@ -179,9 +179,9 @@ export function FormDataSeceurity() {
         {/* Submit Button */}
         <Button
           className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-6 font-semibold shadow-lg hover:shadow-xl transition-all"
+          disabled={loading}
           size="lg"
           type="submit"
-          disabled={loading}
         >
           {loading ? 'Loading...' : 'Kirim'}
         </Button>

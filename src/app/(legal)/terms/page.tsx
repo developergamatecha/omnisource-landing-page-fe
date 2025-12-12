@@ -22,9 +22,9 @@ export default function TermsPage() {
             </h2>
             <div className="prose max-w-none text-gray-700 space-y-4">
               <p>
-                Syarat dan Ketentuan ini {"('"}Ketentuan{"'"}, {"'"}Perjanjian
-                {"'"}
-                {')'} merupakan perjanjian yang mengikat secara hukum antara
+                Syarat dan Ketentuan ini ('Ketentuan', 'Perjanjian
+                '
+                ) merupakan perjanjian yang mengikat secara hukum antara
                 Anda (&quot;Pengguna&quot;, &quot;Anda&quot;) dan{' '}
                 <strong>PT. Gamatecha Solusi Nusantara</strong>{' '}
                 (&quot;Perusahaan&quot;, &quot;kami&quot;) yang mengatur akses
