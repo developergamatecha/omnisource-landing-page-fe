@@ -38,7 +38,7 @@ const featureItems = [
 
 export function SectionHero() {
   return (
-    <section className="relative bg-background" id="beranda">
+    <section className="relative bg-background overflow-x-hidden" id="beranda">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l rounded-full blur-2xl from-primary/10 to-transparent pointer-events-none" />
       <div className="absolute top-20 right-20 w-96 h-80 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
       <div className="w-80 h-80 bg-orange-400 opacity-10 absolute top-[60vh] blur-3xl -translate-y-1/2 left-10"></div>
