@@ -9,13 +9,6 @@ import { toast } from 'sonner';
 import { Button } from '~/components/ui/button';
 import { Input } from '~/components/ui/input';
 import { Textarea } from '~/components/ui/textarea';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '~/components/ui/select';
 import { dataSecuritySchema } from '~/scheme/data-security';
 
 import {
@@ -33,7 +26,6 @@ export function FormDataSeceurity() {
     resolver: zodResolver(dataSecuritySchema),
     mode: 'onChange',
     defaultValues: {
-      userType: '',
       requestDetail: '',
       accountName: '',
       phone: '',
@@ -59,47 +51,19 @@ export function FormDataSeceurity() {
   return (
     <Form {...form}>
       <form className="space-y-6" onSubmit={form.handleSubmit(onSubmit)}>
-        {/* User Type */}
+        {/* Account Name */}
         <FormField
           control={form.control}
-          name="userType"
+          name="accountName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Pilih tipe pengguna</FormLabel>
+              <FormLabel>
+                Nama Usaha / Nama Akun <span className="text-red-400">*</span>
+              </FormLabel>
               <FormControl className="py-1">
-                <Select
-                  value={field.value}
-                  onValueChange={(value) => field.onChange(value)}
-                >
-                  <SelectTrigger className="bg-muted/50 border-0 h-12 rounded-xl w-full">
-                    <SelectValue placeholder="Pilih tipe pengguna" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-card border-border">
-                    <SelectItem value="individual">
-                      Pengguna Individual
-                    </SelectItem>
-                    <SelectItem value="business">Pengguna Bisnis</SelectItem>
-                    <SelectItem value="partner">Partner</SelectItem>
-                    <SelectItem value="merchant">Merchant</SelectItem>
-                  </SelectContent>
-                </Select>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        {/* Request Detail */}
-        <FormField
-          control={form.control}
-          name="requestDetail"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Detail Permintaan</FormLabel>
-              <FormControl className="py-1">
-                <Textarea
-                  className="min-h-[120px] bg-muted/50 border-0 resize-y rounded-xl p-3"
-                  placeholder="Detail Permintaan"
+                <Input
+                  className="bg-muted/50 border-0 h-12 rounded-xl"
+                  placeholder="Nama di akun"
                   value={field.value}
                   onChange={(e) => field.onChange(e.target.value)}
                 />
@@ -109,17 +73,20 @@ export function FormDataSeceurity() {
           )}
         />
 
-        {/* Account Name */}
+        {/* Email */}
         <FormField
           control={form.control}
-          name="accountName"
+          name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nama di akun</FormLabel>
+              <FormLabel>
+                Email Pemilik Usaha<span className="text-red-400">*</span>
+              </FormLabel>
               <FormControl className="py-1">
                 <Input
                   className="bg-muted/50 border-0 h-12 rounded-xl"
-                  placeholder="Nama di akun"
+                  placeholder="Email yang terdaftar di aplikasi"
+                  type="email"
                   value={field.value}
                   onChange={(e) => field.onChange(e.target.value)}
                 />
@@ -135,7 +102,10 @@ export function FormDataSeceurity() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nomor yang terdaftar di aplikasi</FormLabel>
+              <FormLabel>
+                Nomor yang terdaftar di aplikasi
+                <span className="text-red-400">*</span>
+              </FormLabel>
               <FormControl className="py-1">
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-2 bg-muted/50 rounded-xl px-4 py-2 min-w-[110px]">
@@ -155,18 +125,19 @@ export function FormDataSeceurity() {
           )}
         />
 
-        {/* Email */}
+        {/* Request Detail */}
         <FormField
           control={form.control}
-          name="email"
+          name="requestDetail"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email yang terdaftar di aplikasi</FormLabel>
+              <FormLabel>
+                Detail Permintaan<span className="text-red-400">*</span>
+              </FormLabel>
               <FormControl className="py-1">
-                <Input
-                  className="bg-muted/50 border-0 h-12 rounded-xl"
-                  placeholder="Email yang terdaftar di aplikasi"
-                  type="email"
+                <Textarea
+                  className="min-h-[120px] bg-muted/50 border-0 resize-y rounded-xl p-3"
+                  placeholder="Detail Permintaan"
                   value={field.value}
                   onChange={(e) => field.onChange(e.target.value)}
                 />

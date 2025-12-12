@@ -1,7 +1,6 @@
 import { z } from 'zod';
 
 export const dataSecuritySchema = z.object({
-  userType: z.string().min(1, 'Pilih tipe pengguna terlebih dahulu'),
   requestDetail: z.string().min(1, 'Masukkan detail permintaan'),
   accountName: z.string().min(1, 'Masukkan nama akun yang valid'),
   phone: z
