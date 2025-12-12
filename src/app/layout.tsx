@@ -16,11 +16,11 @@ export const metadata: Metadata = {
     description:
       'OmniSource adalah platform SaaS berbasis web dan mobile yang dirancang untuk mengelola operasional outsourcing secara terintegrasi, transparan, dan efisien.',
     type: 'website',
-    url: `${process.env.NEXT_PUBLIC_HELP_CENTER_URL}`,
+    url: `${process.env.NEXT_PUBLIC_LP_URL}`,
     siteName: 'OmniSource',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_HELP_CENTER_URL}/assets/white-logo.webp`,
+        url: `${process.env.NEXT_PUBLIC_LP_URL}/assets/white-logo.webp`,
         width: 1200,
         height: 630,
         alt: 'OmniSource - One Platform to Manage All Your Outsourcing Operations',
@@ -35,14 +35,14 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_HELP_CENTER_URL}/assets/white-logo.webp`,
+        url: `${process.env.NEXT_PUBLIC_LP_URL}/assets/white-logo.webp`,
         width: 1200,
         height: 630,
         alt: 'OmniSource - One Platform to Manage All Your Outsourcing Operations',
       },
     ],
   },
-  metadataBase: new URL(`${process.env.NEXT_PUBLIC_HELP_CENTER_URL}`),
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_LP_URL}`),
   alternates: {
     canonical: './',
   },
