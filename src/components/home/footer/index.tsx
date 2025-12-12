@@ -18,6 +18,7 @@ const legals = [
   },
   { label: 'Terms & Conditions', href: '/terms' },
   { label: 'Privacy Policy', href: '/privacy-policy' },
+  { label: 'Data Security', href: '/data-security' },
 ];
 
 export function SectionContact() {
