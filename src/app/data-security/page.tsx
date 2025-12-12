@@ -3,6 +3,7 @@ import { ArrowLeft } from 'lucide-react';
 import Image from 'next/image';
 
 import { FormDataSeceurity } from '~/components/data-security/form';
+import { MainFooter } from '~/components/footer';
 
 export default function Securities() {
   return (
@@ -60,8 +61,9 @@ export default function Securities() {
             className="text-primary max-w-3xl mx-auto mb-4 text-sm md:text-base animate-fade-in"
             style={{ animationDelay: '0.1s' }}
           >
-            OmniSource memahami bahwa pengalaman pelanggan yang lebih baik
-            dimulai dengan privasi dan perlindungan data.
+            Omnisource sangat percaya bahwa pengalaman pengguna dapat menjadi
+            lebih baik berangkat melalui privasi dan perlindungan data yang
+            mumpuni.
           </p>
 
           <p
@@ -69,26 +71,29 @@ export default function Securities() {
             style={{ animationDelay: '0.2s' }}
           >
             Kami senang dapat membantu setiap pertanyaan, masukan, atau
-            permintaan yang Anda miliki mengenai Pemberitahuan Privasi
-            OmniSource, praktik privasi dan perlindungan data kami, atau
-            bagaimana OmniSource menerapkan hukum privasi dan perlindungan data.
+            permintaan yang Anda miliki mengenai privasi data dan perlindungan
+            kenyamanan anda selama menggunakan layanan omnisource
           </p>
 
           <p
             className="text-muted-foreground max-w-4xl mx-auto mb-4 text-sm md:text-base animate-fade-in"
             style={{ animationDelay: '0.3s' }}
           >
-            Jika anda ingin mempelajari lebih lanjut tentang pendekatan
-            OmniSource terhadap{' '}
+            Jika anda ingin mempelajari lebih lanjut mengenai pendekatan
+            omnisource terhadap kenyamanan serta
             <span className="text-primary cursor-pointer hover:underline">
-              privasi
+              data privasi
             </span>{' '}
-            dan{' '}
-            <span className="text-primary cursor-pointer hover:underline">
-              perlindungan data
-            </span>
-            , Anda dapat mengakses Pemberitahuan Privasi kami untuk informasi
-            lebih lanjut.
+            selama menggunakan layanan kami, anda dapat mengakses layanan help
+            center kami melalui informasi berikut <br />
+            <a
+              href={process.env.NEXT_PUBLIC_HELP_CENTER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary cursor-pointer hover:underline"
+            >
+              help center
+            </a>
           </p>
         </div>
       </section>
@@ -114,31 +119,21 @@ export default function Securities() {
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
                     <span>
-                      Informasi yang diminta di atas digunakan untuk tujuan
-                      otentikasi. Selain itu, informasi tambahan dapat diminta
-                      untuk tujuan validasi/verifikasi (sebagaimana berlaku),
-                      serta untuk pemenuhan permintaan.
+                      Informasi yang diinputkan digunakan demi tujuan verifikasi
+                      data dan pemenuhan permintaan atas pengajuan terkait.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
                     <span>
-                      Jangka waktu pemenuhan permintaan dapat berbeda di setiap
-                      wilayah sesuai dengan hukum yang berlaku.
+                      Pemohon diharapkan untuk mengisi data secara benar dan
+                      sesuai dan tidak menyalahgunakan pengisian form ini.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
                     <span>
-                      Pemohon dengan ini diinstruksikan untuk memastikan agar
-                      pengidentifikasi unik dibuat tidak dapat dipahami sebelum
-                      menyerahkan salinan pindaian dokumen otentikasi.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <span>
-                      Semua pertanyaan dengan tanda bintang wajib diisi.
+                      Mohon untuk mengisi keseluruhan informasi bertanda bintang
                     </span>
                   </li>
                 </ul>
@@ -149,41 +144,7 @@ export default function Securities() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-foreground py-8 border-t border-border/20">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-3">
-              <svg
-                fill="none"
-                height="32"
-                viewBox="0 0 40 40"
-                width="32"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M20 4C11.163 4 4 11.163 4 20C4 28.837 11.163 36 20 36C24.418 36 28.418 34.209 31.314 31.314"
-                  fill="none"
-                  stroke="hsl(var(--primary))"
-                  strokeLinecap="round"
-                  strokeWidth="5"
-                />
-                <circle cx="32" cy="14" fill="hsl(var(--primary))" r="5" />
-                <ellipse
-                  cx="32"
-                  cy="26"
-                  fill="hsl(var(--primary))"
-                  rx="4"
-                  ry="6"
-                />
-              </svg>
-              <span className="text-background font-bold">OMNI SOURCE</span>
-            </div>
-            <p className="text-muted-foreground text-sm">
-              © 2024 OmniSource. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <MainFooter />
     </div>
   );
 }
