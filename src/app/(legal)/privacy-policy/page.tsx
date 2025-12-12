@@ -1,3 +1,14 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'OmniSource - Kebijakan Privasi',
+  description: 'Kebijakan Privasi untuk menggunakan layanan OmniSource',
+  robots: {
+    index: process.env.NEXT_PUBLIC_ENVIRONMENT == 'production' ? true : false,
+    follow: process.env.NEXT_PUBLIC_ENVIRONMENT == 'production' ? true : false,
+  },
+};
+
 export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen">

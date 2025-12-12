@@ -25,7 +25,7 @@ export function TopNavbar() {
           <div className="flex items-center gap-3 group cursor-pointer">
             <div className="relative">
               <Image
-                alt="Logo"
+                alt="Logo OmniSource"
                 height={30}
                 src="/assets/white-logo.webp"
                 width={30}
