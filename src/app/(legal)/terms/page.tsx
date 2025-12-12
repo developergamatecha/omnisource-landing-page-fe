@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pb-20">
       <div className="bg-white ">
         {/* Header */}
         <div className="flex items-center justify-center flex-col mb-12 -bg-linear-210 from-primary to-primary/50 h-[300px]! px-8">
