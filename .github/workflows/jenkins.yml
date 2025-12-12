@@ -1,0 +1,36 @@
+name: Deploy to Dev / Staging
+
+on:
+  push:
+    branches:
+      - dev
+      - main
+
+jobs:
+  deploy-dev:
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Jenkins Dev Build
+        env:
+          JENKINS_API: ${{ secrets.JENKINS_API }}
+          JENKINS_DEV_BUILD_TOKEN: ${{ secrets.JENKINS_DEV_BUILD_TOKEN }}
+          REPO_NAME: ${{ github.event.repository.name }}
+        run: |
+          echo "Deploying to Dev (branch dev)..."
+          curl -v -A "Mozilla/5.0" \
+            "https://developer:${JENKINS_API}@jenkins.gamatecha.space/job/Omnisource/job/Dev/job/${REPO_NAME}/build?token=${JENKINS_DEV_BUILD_TOKEN}"
+
+  deploy-staging:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Jenkins Staging Build
+        env:
+          JENKINS_API: ${{ secrets.JENKINS_API }}
+          JENKINS_DEV_BUILD_TOKEN: ${{ secrets.JENKINS_DEV_BUILD_TOKEN }}
+          REPO_NAME: ${{ github.event.repository.name }}
+        run: |
+          echo "Deploying to Staging (branch main)..."
+          curl -v -A "Mozilla/5.0" \
+            "https://developer:${JENKINS_API}@jenkins.gamatecha.space/job/Omnisource/job/Staging/job/${REPO_NAME}/build?token=${JENKINS_DEV_BUILD_TOKEN}"
