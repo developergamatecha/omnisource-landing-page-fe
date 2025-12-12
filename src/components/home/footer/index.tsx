@@ -88,7 +88,7 @@ export function SectionContact() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <Image
-                  alt="Logo"
+                  alt="Logo OmniSource"
                   height={35}
                   src="/assets/white-logo.webp"
                   width={35}

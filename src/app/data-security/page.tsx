@@ -30,7 +30,7 @@ export default function Securities() {
             >
               <div className="relative">
                 <Image
-                  alt=""
+                  alt="Logo OmniSource"
                   height={30}
                   src="/assets/white-logo.webp"
                   width={30}
