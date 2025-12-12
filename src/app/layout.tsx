@@ -42,6 +42,10 @@ export const metadata: Metadata = {
       },
     ],
   },
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_LP_URL}`),
+  alternates: {
+    canonical: './',
+  },
   robots: {
     index: process.env.NEXT_PUBLIC_ENVIRONMENT == 'production' ? true : false,
     follow: process.env.NEXT_PUBLIC_ENVIRONMENT == 'production' ? true : false,
