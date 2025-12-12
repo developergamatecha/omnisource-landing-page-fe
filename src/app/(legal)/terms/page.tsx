@@ -1,4 +1,13 @@
-import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'OmniSource - Syarat dan Ketentuan',
+  description: 'Syarat dan Ketentuan untuk menggunakan layanan OmniSource',
+  robots: {
+    index: process.env.NEXT_PUBLIC_ENVIRONMENT == 'production' ? true : false,
+    follow: process.env.NEXT_PUBLIC_ENVIRONMENT == 'production' ? true : false,
+  },
+};
 
 export default function TermsPage() {
   return (

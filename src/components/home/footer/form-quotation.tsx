@@ -30,8 +30,15 @@ export function FormQuotation() {
   });
 
   const onSubmit = async (data: z.infer<typeof contactUsSchema>) => {
+    const message = `Halo, saya tertarik dengan produk omnisource. Berikut informasi terkait saya
+Nama: ${data.firstName} ${data.lastName},
+Email: ${data.email},
+Lokasi: ${data.location},
+No. Telp: ${data.phone}
+Terima kasih!
+      `;
     const mailtoLink = `mailto:ping@gamatecha.com?subject=Quotation Request&body=${encodeURIComponent(
-      JSON.stringify(data, null, 2),
+      message,
     )}`;
 
     window.open(mailtoLink, '_blank');

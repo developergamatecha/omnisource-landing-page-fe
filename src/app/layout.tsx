@@ -42,6 +42,10 @@ export const metadata: Metadata = {
       },
     ],
   },
+  robots: {
+    index: process.env.NEXT_PUBLIC_ENVIRONMENT == 'production' ? true : false,
+    follow: process.env.NEXT_PUBLIC_ENVIRONMENT == 'production' ? true : false,
+  },
   icons: {
     icon: '/favicon.ico',
     apple: '/favicon-32x32.webp',
@@ -60,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body className={cn(rubik.className, 'relative')}>
         {children}
         <Toaster />
