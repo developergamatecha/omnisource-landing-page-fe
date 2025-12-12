@@ -50,7 +50,7 @@ export function SectionCTA() {
               {/* Google Play Button */}
               <a
                 className="inline-flex items-center gap-3 bg-black text-white px-5 py-3 rounded-lg hover:bg-black/80 transition-colors"
-                href={process.env.NEXT_PUBLIC_PlAYSTORE_URL}
+                href={process.env.NEXT_PUBLIC_PLAYSTORE_URL}
                 target="_blank"
               >
                 <svg
