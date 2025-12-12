@@ -63,7 +63,7 @@ export function SectionPricing() {
           {plans.map((plan, index) => (
             <div
               key={plan.name}
-              className={`relative animate-fade-in ${plan.popular ? 'md:-mt-4' : ''}`}
+              className="relative animate-fade-in"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               {/* Popular badge */}

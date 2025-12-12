@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import Image from 'next/image';
 
 import { FormDataSeceurity } from '~/components/data-security/form';
-import Image from 'next/image';
 
 export default function Securities() {
   return (
@@ -18,10 +18,10 @@ export default function Securities() {
             >
               <div className="relative">
                 <Image
-                  src={'/assets/white-logo.webp'}
                   alt=""
-                  width={30}
                   height={30}
+                  src="/assets/white-logo.webp"
+                  width={30}
                 />
               </div>
               <div className="flex flex-col">

@@ -6,7 +6,7 @@ import Image from 'next/image';
 const features = [
   {
     id: 1,
-    icon: '/assets/v5/feature-icon-1.png',
+    icon: '/assets/dashboard.svg',
     title: 'Dashboard &  Report Comprehensive',
     description:
       'Akses diagram analitik dan pantau laporan aktivitas operasional pada bisnis outsource anda',
@@ -14,7 +14,7 @@ const features = [
   },
   {
     id: 2,
-    icon: '/assets/v5/feature-icon-2.png',
+    icon: '/assets/payroll.svg',
     title: 'Payroll Automation',
     description:
       'Lakukan perhitungan gaji otomatis berdasarkan presensi dan komponen gaji untuk petugas ',
@@ -37,7 +37,7 @@ const features = [
   },
   {
     id: 5,
-    icon: '/assets/v5/feature-icon-1.png',
+    icon: '/assets/shift.svg',
     title: 'HRIS & Shift Management',
     description: 'Manajemen data dan jadwal kerja petugas secara terpusat.',
     gradient: 'from-purple-200 via-violet-100 to-white',
