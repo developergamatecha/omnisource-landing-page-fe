@@ -6,7 +6,9 @@ import * as THREE from 'three';
 
 function LaptopModel() {
   const meshRef = useRef<THREE.Group>(null);
-  const { scene } = useGLTF('/assets/threejs/macbook_pro_14_inch_M5.glb');
+  const { scene } = useGLTF(
+    '/assets/threejs/macbook_pro_14_inch_M5.compressed.glb',
+  );
 
   const { size } = useThree();
   // Reactive responsive logic based on Canvas pixel width
