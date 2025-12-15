@@ -12,6 +12,19 @@ OmniSource bagi pengguna baru.
 
 ---
 
+| Teknologi             | Versi    | Deskripsi                          |
+| :-------------------- | :------- | :--------------------------------- |
+| **Next.js**           | 16.0.7   | Framework React utama (App Router) |
+| **React**             | 19.2.0   | Library UI core                    |
+| **Tailwind CSS**      | v4       | Utility-first CSS framework        |
+| **Three.js**          | ^0.181.2 | Library 3D JavaScript              |
+| **React Three Fiber** | ^9.4.2   | React renderer untuk Three.js      |
+| **React Three Drei**  | ^10.7.7  | Helper library untuk R3F           |
+| **TypeScript**        | ^5       | Static typing untuk JavaScript     |
+| **pnpm**              | 10.24.0  | Package manager yang digunakan     |
+
+---
+
 ## 2. Pola Layout
 
 ### Struktur Inti
