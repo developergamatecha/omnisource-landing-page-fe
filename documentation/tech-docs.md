@@ -183,5 +183,7 @@ berbagai perangkat.
 
 - Semua formulir masih menggunakan metode dasar seperti (mail:to), sehingga
   perlu diintegrasikan dengan API agar data dapat diolah lebih lanjut.
+- Formulir data security, masih berupa form statis tanpa mengirim ke API atau
+  Mailto, sehingga perlu diintegrasikan dengan API.
 - Pengembangan kedepan perlu mengintegrasikan dengan platform advertisment
   seperti Google Ads atau Meta Ads, untuk memantau traffic dan performa iklan.
