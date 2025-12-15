@@ -4,6 +4,17 @@ import Image from 'next/image';
 
 import { FormDataSeceurity } from '~/components/data-security/form';
 import { MainFooter } from '~/components/footer';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'OmniSource - Keamanan Data',
+  description: 'Keamanan Data untuk menggunakan layanan OmniSource',
+
+  robots: {
+    index: process.env.NEXT_PUBLIC_ENVIRONMENT == 'production' ? true : false,
+    follow: process.env.NEXT_PUBLIC_ENVIRONMENT == 'production' ? true : false,
+  },
+};
 
 export default function Securities() {
   return (
@@ -19,7 +30,7 @@ export default function Securities() {
             >
               <div className="relative">
                 <Image
-                  alt=""
+                  alt="Logo OmniSource"
                   height={30}
                   src="/assets/white-logo.webp"
                   width={30}
@@ -87,10 +98,10 @@ export default function Securities() {
             selama menggunakan layanan kami, anda dapat mengakses layanan help
             center kami melalui informasi berikut <br />
             <a
-              href={process.env.NEXT_PUBLIC_HELP_CENTER_URL}
-              target="_blank"
-              rel="noopener noreferrer"
               className="text-primary cursor-pointer hover:underline"
+              href={process.env.NEXT_PUBLIC_HELP_CENTER_URL}
+              rel="noopener noreferrer"
+              target="_blank"
             >
               help center
             </a>
