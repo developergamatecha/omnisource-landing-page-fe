@@ -165,3 +165,10 @@ berbagai perangkat.
   bisa merender WebGL atau untuk user dengan preferensi reduced motion.
 - **ARIA Labels**: Pastikan semua elemen interaktif, termasuk kontrol 3D,
   memiliki ARIA labels yang tepat.
+
+### Integrasi Lebih Lanjut
+
+- Semua formulir masih menggunakan metode dasar seperti (mail:to), sehingga
+  perlu diintegrasikan dengan API agar data dapat diolah lebih lanjut.
+- Pengembangan kedepan perlu mengintegrasikan dengan platform advertisment
+  seperti Google Ads atau Meta Ads, untuk memantau traffic dan performa iklan.
